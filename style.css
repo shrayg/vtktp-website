@@ -1,8 +1,5 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f8f9fa;
-  color: #222;
+html, body {
+  background: #f4f8fb !important;
 }
 
 .menu-toggle {
@@ -105,7 +102,7 @@ main {
   margin-left: 0;
   padding: 48px 32px;
   min-height: 100vh;
-  background: #fff;
+  background: #f4f8fb;
   box-sizing: border-box;
   transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -134,11 +131,15 @@ main {
 }
 
 .chapter-subtitle {
-  font-size: 1.1em;
+  font-size: 2em;
   color: #3CB371;
   margin-top: 0;
   margin-bottom: 1.5em;
-  font-weight: 500;
+  font-weight: bold;
+  text-align: center;
+}
+.centered-notice {
+  text-align: center;
 }
 
 .group-photo-container {
@@ -157,11 +158,18 @@ main {
   box-shadow: 0 2px 8px rgba(43,77,137,0.10);
 }
 
-.main-logo {
-  display: block;
-  margin: 0 auto 32px auto;
-  max-width: 300px;
+.main-logo, .large-logo {
+  width: 260px;
+  max-width: 95vw;
   height: auto;
+  display: block;
+  margin: 0 auto 40px auto;
+}
+.main-title, .larger-title {
+  font-size: 3.2em;
+  color: #2B4D89;
+  margin-bottom: 0.2em;
+  text-align: center;
 }
 
 .interest-form-section {
@@ -250,6 +258,19 @@ main {
   object-fit: contain;
 }
 
+.centered-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 32px 0;
+}
+.centered-logo img {
+  width: 260px;
+  max-width: 95vw;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 800px) {
   .sidebar {
     width: 200px;
@@ -315,5 +336,12 @@ main {
   .interest-btn {
     padding: 16px 16px;
     font-size: 1.1em;
+  }
+  .centered-logo img,
+  .main-logo, .large-logo {
+    width: 140px;
+  }
+  .main-title, .larger-title {
+    font-size: 1.7em;
   }
 } 
