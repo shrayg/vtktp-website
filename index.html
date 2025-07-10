@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <style>
-    body {
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 10%;
-      color: #333;
-      margin: 0;
-      min-height: 25vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .logo {
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-width: 200px;
-      height: auto;
-    }
-    h1 {
-      font-size: 2em;
-      margin: 0;
-      max-width: 600px;
-      line-height: 1.4;
-    }
-    .form-link {
-      margin-top: 20px;
-      font-size: 1em;
-    }
-    .form-link a {
-      color: #333;
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kappa Theta Pi - Virginia Tech</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="logo">
-    <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo" />
-  </div>
-  <h1>Thanks for visiting, we're currently working on this website. See you soon! - KTP @Virginia Tech</h1>
-  <div class="form-link">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform?fbclid=PAZXh0bgNhZW0CMTEAAael8JTNuHKSNeIBXS9rub0coZ2mXPTqc-MEyu3Sj5_jzdIVlwCLDF5kHCSlXg_aem__Lsx405UojwoIwsLDAxNxw" target="_blank">
-      Click here to fill out our interest form!
+  <div class="top-right-icons">
+    <a href="https://instagram.com/vtktp" target="_blank" class="icon-link" aria-label="Instagram">
+      <img src="Instagram_logo.png" alt="Instagram" class="social-icon">
+    </a>
+    <a href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/posts/?feedView=all" target="_blank" class="icon-link" aria-label="LinkedIn">
+      <img src="LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
     </a>
   </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo">
+    </div>
+    <nav>
+      <ul>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About KTP</a></li>
+        <li><a href="#members">Members</a></li>
+      </ul>
+      <div class="coming-soon">More coming soon!</div>
+    </nav>
+  </div>
+  <main>
+    <section id="home" class="main-section">
+      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo" class="main-logo">
+      <h1>Welcome to Kappa Theta Pi!</h1>
+      <h2 class="chapter-subtitle">Alpha Gamma Chapter</h2>
+      <div class="notice">
+        This website is still being worked on! Please check back frequently or follow our Instagram for more updates.
+      </div>
+      <div class="interest-form-link prominent">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform?fbclid=PAZXh0bgNhZW0CMTEAAael8JTNuHKSNeIBXS9rub0coZ2mXPTqc-MEyu3Sj5_jzdIVlwCLDF5kHCSlXg_aem__Lsx405UojwoIwsLDAxNxw" class="interest-btn" target="_blank">Interest Form</a>
+      </div>
+      <div class="group-photo-container">
+        <img src="group_photo.jpg" alt="Group Photo of All Members" class="group-photo-img">
+      </div>
+    </section>
+    <!-- Other sections can be added here -->
+  </main>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+    // Optional: close sidebar when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
