@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kappa Theta Pi - Philanthropy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-right-icons">
+    <a href="https://instagram.com/vtktp" target="_blank" class="icon-link" aria-label="Instagram">
+      <img src="Instagram_logo.png" alt="Instagram" class="social-icon">
+    </a>
+    <a href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/posts/?feedView=all" target="_blank" class="icon-link" aria-label="LinkedIn">
+      <img src="LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
+    </a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="sidebar" id="sidebar">
+    <div class="logo centered-logo">
+      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About KTP</a></li>
+        <li class="active"><a href="philanthropy.html">Philanthropy</a></li>
+        <li><a href="members.html">Members</a></li>
+      </ul>
+      <div class="coming-soon">More coming soon!</div>
+    </nav>
+  </div>
+  <div class="fade-overlay" id="fadeOverlay"></div>
+  <div class="logo centered-logo">
+    <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo">
+  </div>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const fadeOverlay = document.getElementById('fadeOverlay');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      fadeOverlay.classList.toggle('active');
+    });
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('open');
+        fadeOverlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html> 
