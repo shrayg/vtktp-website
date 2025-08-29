@@ -10,7 +10,7 @@ export default function SocialIcons() {
               href="https://instagram.com/vtktp"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-[#2B4D89] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
+              className="w-10 h-10 bg-[#0049ba] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
               aria-label="Instagram"
             >
               <Image
@@ -25,7 +25,7 @@ export default function SocialIcons() {
               href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-[#2B4D89] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
+              className="w-10 h-10 bg-[#0049ba] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
               aria-label="LinkedIn"
             >
               <Image

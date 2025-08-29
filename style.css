@@ -8,7 +8,7 @@ html, body {
   left: 24px;
   width: 40px;
   height: 40px;
-  background: #2B4D89;
+  background: #0049ba;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -35,7 +35,7 @@ html, body {
   top: 0;
   width: 240px;
   height: 100vh;
-  background: #2B4D89;
+  background: #0049ba;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ html, body {
 }
 
 .notice {
-  background: #2B4D89;
+  background: #0049ba;
   color: #fff;
   padding: 16px 24px;
   border-radius: 8px;
@@ -121,7 +121,7 @@ main {
 }
 
 .main-section h1 {
-  color: #2B4D89;
+  color: #0049ba;
   margin-bottom: 0.2em;
 }
 .main-section h2 {
@@ -167,7 +167,7 @@ main {
 }
 .main-title, .larger-title {
   font-size: 3.2em;
-  color: #2B4D89;
+  color: #0049ba;
   margin-bottom: 0.2em;
   text-align: center;
 }
@@ -178,7 +178,7 @@ main {
   gap: 32px;
   margin-top: 2em;
   background: #f4f8fb;
-  border: 2px solid #2B4D89;
+  border: 2px solid #0049ba;
   border-radius: 0;
   box-shadow: 0 2px 8px rgba(43,77,137,0.07);
   padding: 24px 32px;
@@ -213,7 +213,7 @@ main {
 .interest-btn {
   display: inline-block;
   padding: 24px 48px;
-  background: #2B4D89;
+  background: #0049ba;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
@@ -243,7 +243,7 @@ main {
   width: 48px;
   height: 48px;
   background: #fff;
-  border: 2px solid #2B4D89;
+  border: 2px solid #0049ba;
   border-radius: 0;
   box-shadow: 0 2px 8px rgba(43,77,137,0.10);
   transition: background 0.2s, border 0.2s;

@@ -14,24 +14,27 @@ const aboutImages = [
   { src: '/ff8d78d5-23d0-474d-a75e-9928de33dab0.jpg', alt: 'KTP Activity 7', className: 'w-40 h-52 md:w-48 md:h-60 rounded-lg shadow-lg' },
 ];
 
+import Head from 'next/head';
 export default function Home() {
   return (
     <>
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-        <div className="max-w-7xl mx-auto w-full">
+      <Head>
+        <title>Kappa Theta Pi - Virginia Tech</title>
+        <meta name="description" content="Kappa Theta Pi is Virginia Tech's professional technology fraternity. Learn about our members, philanthropy, and how to join!" />
+        <meta property="og:title" content="Kappa Theta Pi - Virginia Tech" />
+        <meta property="og:description" content="Kappa Theta Pi is Virginia Tech's professional technology fraternity. Learn about our members, philanthropy, and how to join!" />
+        <meta property="og:image" content="/KTP_Logos_Letters_KTP_Logo.png" />
+        <meta property="og:type" content="website" />
+      </Head>
+  <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-0 pb-0 -mt-20">
+  <div className="w-full mt-0">
           {/* Page Logo */}
           <div className="mb-8 text-center">
-            <Image
-              src="/KTP_Logos_Letters_KTP_Logo.png"
-              alt="KTP Logo"
-              width={300}
-              height={150}
-              className="mx-auto mb-8"
-            />
+              {/* Logo image removed */}
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-0">
             {/* Image Collage - Left Side */}
             <div className="order-2 lg:order-1">
               <div className="relative">
@@ -39,24 +42,28 @@ export default function Home() {
                 <div className="grid grid-cols-3 gap-4 auto-rows-max">
                   {/* Row 1 */}
                   <div className="col-span-2">
-                    <div className="relative w-full h-32 md:h-40 rounded-lg shadow-lg overflow-hidden">
+                    <div className="relative w-full h-44 md:h-56 rounded-lg shadow-lg overflow-hidden">
                       <Image
                         src={aboutImages[0].src}
                         alt={aboutImages[0].alt}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
+                        aria-label={aboutImages[0].alt}
                       />
                     </div>
                   </div>
                   <div className="col-span-1">
-                    <div className="relative w-full h-32 md:h-40 rounded-lg shadow-lg overflow-hidden">
+                    <div className="relative w-full h-44 md:h-56 rounded-lg shadow-lg overflow-hidden">
                       <Image
                         src={aboutImages[1].src}
                         alt={aboutImages[1].alt}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 25vw"
+                        loading="lazy"
+                        aria-label={aboutImages[1].alt}
                       />
                     </div>
                   </div>
@@ -125,10 +132,10 @@ export default function Home() {
 
             {/* Content Card - Right Side */}
             <div className="order-1 lg:order-2">
-              <Card className="shadow-lg h-fit">
+              <Card className="shadow-lg h-fit text-xl md:text-2xl p-6">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-semibold text-[#2B4D89]">
-                    Professional Technology Fraternity at Virginia Tech
+                  <CardTitle className="text-2xl font-semibold text-[#0049ba]">
+                    The Premier Professional Technology Fraternity at Virginia Tech
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">

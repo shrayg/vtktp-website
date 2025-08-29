@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kappa Theta Pi - Virginia Tech</title>
+  <meta name="description" content="Kappa Theta Pi is Virginia Tech's professional technology fraternity. Learn about our members, philanthropy, and how to join!">
+  <meta property="og:title" content="Kappa Theta Pi - Virginia Tech">
+  <meta property="og:description" content="Kappa Theta Pi is Virginia Tech's professional technology fraternity. Learn about our members, philanthropy, and how to join!">
+  <meta property="og:image" content="KTP_Logos_Letters_KTP_Logo.png">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,12 +26,12 @@
     <span></span>
   </button>
   <div class="sidebar" id="sidebar">
-    <div class="logo">
-      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo">
+    <div class="logo" aria-label="KTP Logo">
+      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="Kappa Theta Pi Logo at Virginia Tech" width="120" height="60" />
     </div>
-    <nav>
+    <nav aria-label="Main Navigation">
       <ul>
-        <li class="active"><a href="#home">Home</a></li>
+        <li class="active"><a href="#home" aria-current="page">Home</a></li>
         <li><a href="about.html">About KTP</a></li>
         <li><a href="philanthropy.html">Philanthropy</a></li>
         <li><a href="members.html">Members</a></li>
@@ -36,7 +41,7 @@
   </div>
   <main>
     <section id="home" class="main-section">
-      <img src="KTP_Logos_Letters_KTP_Logo.png" alt="KTP Logo" class="main-logo large-logo">
+  <img src="KTP_Logos_Letters_KTP_Logo.png" alt="Kappa Theta Pi Logo at Virginia Tech" class="main-logo large-logo" width="260" height="130" loading="lazy">
       <h1 class="main-title larger-title">Welcome to Kappa Theta Pi!</h1>
       <h2 class="chapter-subtitle">Alpha Gamma Chapter</h2>
       <div class="notice centered-notice">
@@ -46,7 +51,7 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform?fbclid=PAZXh0bgNhZW0CMTEAAael8JTNuHKSNeIBXS9rub0coZ2mXPTqc-MEyu3Sj5_jzdIVlwCLDF5kHCSlXg_aem__Lsx405UojwoIwsLDAxNxw" class="interest-btn" target="_blank">Interest Form</a>
       </div>
       <div class="group-photo-container">
-        <img src="group_photo.jpg" alt="Group Photo of All Members" class="group-photo-img">
+        <img src="group_photo.jpg" alt="Group Photo of All KTP Members at Virginia Tech" class="group-photo-img" width="700" height="auto" loading="lazy">
       </div>
     </section>
     <!-- Other sections can be added here -->
@@ -56,6 +61,12 @@
     const sidebar = document.getElementById('sidebar');
     menuToggle.addEventListener('click', () => {
       sidebar.classList.toggle('open');
+    });
+    // Close sidebar when clicking a nav link (for accessibility/mobile)
+    sidebar.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+      });
     });
     // Optional: close sidebar when clicking outside on mobile
     document.addEventListener('click', (e) => {

@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+import Head from 'next/head';
 import SocialIcons from '@/components/SocialIcons';
 
 // Eboard members with positions
@@ -35,7 +37,6 @@ const members = [
   { photo: '/mcdonald.jpg', name: 'Brianna McDonald' },
   { photo: '/radhakrishnan.jpg', name: 'Ramya Radhakrishnan' },
   { photo: '/rajgopal.jpg', name: 'Antara Rajgopal' },
-  { photo: '/sharma.jpg', name: 'Ahbi Sharma' },
   { photo: '/sullivan.jpg', name: 'Benjamin Sullivan' },
   { photo: '/talreja.jpg', name: 'Simha Talreja' },
   { photo: '/tripathy.jpg', name: 'Ashwin Tripathy' },
@@ -45,28 +46,28 @@ const members = [
 export default function Members() {
   return (
     <>
+      <Head>
+        <title>Members - Kappa Theta Pi Virginia Tech</title>
+        <meta name="description" content="Meet the members of Kappa Theta Pi at Virginia Tech, including our executive board and chapter members." />
+        <meta property="og:title" content="Members - Kappa Theta Pi Virginia Tech" />
+        <meta property="og:description" content="Meet the members of Kappa Theta Pi at Virginia Tech, including our executive board and chapter members." />
+        <meta property="og:image" content="/KTP_Logos_Letters_KTP_Logo.png" />
+        <meta property="og:type" content="website" />
+      </Head>
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
         <div className="max-w-7xl mx-auto w-full">
           {/* Page Logo */}
-          <div className="mb-8 text-center">
-            <Image
-              src="/KTP_Logos_Letters_KTP_Logo.png"
-              alt="KTP Logo"
-              width={300}
-              height={150}
-              className="mx-auto mb-8"
-            />
-          </div>
+          {/* Logo image removed */}
 
           {/* Page Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-[#2B4D89] mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#0049ba] mb-8 text-center">
             Members
           </h1>
 
           {/* Eboard Card */}
           <Card className="max-w-5xl mx-auto shadow-lg mb-8">
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-[#2B4D89]">
+              <CardTitle className="text-2xl font-semibold text-[#0049ba]">
                 E-Board
               </CardTitle>
             </CardHeader>
@@ -74,7 +75,7 @@ export default function Members() {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {eboardMembers.map((member, index) => (
                   <div key={index} className="flex flex-col items-center space-y-2">
-                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#2B4D89] shadow-lg">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#0049ba] shadow-lg">
                       <Image
                         src={member.photo}
                         alt={`${member.name} headshot`}
@@ -84,7 +85,7 @@ export default function Members() {
                       />
                     </div>
                     <div className="text-center">
-                      <p className="text-sm font-medium text-[#2B4D89]">
+                      <p className="text-sm font-medium text-[#0049ba]">
                         {member.name}
                       </p>
                       <p className="text-xs text-gray-600 mt-1">
@@ -100,7 +101,7 @@ export default function Members() {
           {/* Content Card */}
           <Card className="max-w-5xl mx-auto shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-[#2B4D89]">
+              <CardTitle className="text-2xl font-semibold text-[#0049ba]">
                 Meet Our Chapter
               </CardTitle>
             </CardHeader>
@@ -124,13 +125,13 @@ export default function Members() {
 
               {/* Member Headshots Grid */}
               <div className="mt-8">
-                <h2 className="text-xl font-semibold text-[#2B4D89] mb-6">
+                <h2 className="text-xl font-semibold text-[#0049ba] mb-6">
                   Members
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                   {members.map((member, index) => (
                     <div key={index} className="flex flex-col items-center space-y-2">
-                      <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#2B4D89] shadow-lg">
+                      <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#0049ba] shadow-lg">
                         <Image
                           src={member.photo}
                           alt={`${member.name} headshot`}
@@ -139,7 +140,7 @@ export default function Members() {
                           sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                         />
                       </div>
-                      <p className="text-sm font-medium text-[#2B4D89] text-center">
+                      <p className="text-sm font-medium text-[#0049ba] text-center">
                         {member.name}
                       </p>
                     </div>
