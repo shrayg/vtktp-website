@@ -34,7 +34,7 @@ export default function Contact() {
           {/* Left Side: Contact Info */}
           <div className="flex flex-col justify-center items-center text-center p-8">
             <h1 className="text-5xl font-bold mb-6 text-[#0049ba]">Contact Us</h1>
-            <p className="text-lg text-gray-700 mb-2">We'd love to hear from you!</p>
+            <p className="text-lg text-gray-700 mb-2">We&apos;d love to hear from you!</p>
             <p className="text-base text-gray-500">Email: <span className="font-mono">contact@ktp-vt.org</span></p>
             <div className="mt-8 flex flex-col items-center">
               {/* Placeholder for image */}

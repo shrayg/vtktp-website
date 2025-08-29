@@ -1,5 +1,5 @@
 
-import Image from 'next/image';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import SocialIcons from '@/components/SocialIcons';
 import Head from 'next/head';
