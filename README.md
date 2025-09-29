@@ -112,21 +112,6 @@ npx shadcn@latest add <component-name>
 1. Connect your GitHub repository to Netlify Project
 2. Deploy automatically on push to main branch
 
-## Migration Notes
-
-### From Static HTML to Next.js
-- **Routing**: File-based routing with App Router
-- **Styling**: Migrated from custom CSS to Tailwind utility classes
-- **Components**: Converted to React components with TypeScript
-- **Images**: Optimized with Next.js Image component
-- **Performance**: Automatic code splitting and optimization
-
-### Benefits of Migration
-- **Performance**: Server-side rendering and static generation
-- **Developer Experience**: Hot reloading, TypeScript, better tooling
-- **Maintainability**: Component-based architecture
-- **Scalability**: Easy to add new features and pages
-- **SEO**: Better search engine optimization
 
 ## For Contributing
 
