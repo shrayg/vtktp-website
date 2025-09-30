@@ -3,8 +3,46 @@ import { Card } from "@/components/ui/card";
 import GradualBlur from "@/components/GradualBlur";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, Code, Users } from "lucide-react";
+import placeholderMale from "@/assets/placeholder-male.png";
+import placeholderFemale from "@/assets/placeholder-female.png";
 
 const Members = () => {
+  const eBoard = [
+    { name: "Jasmine Varma", role: "President", gender: "female" },
+    { name: "Kamryn McKinney", role: "VP Internal Affairs", gender: "female" },
+    { name: "Ghazal Tanavade", role: "VP External Affairs", gender: "female" },
+    { name: "Riaz Ahsan", role: "VP Professional & Technical Development", gender: "male" },
+    { name: "Julia Suchkova", role: "VP Marketing", gender: "female" },
+    { name: "Nazila Abyaneh", role: "VP Finance", gender: "female" },
+    { name: "Morgan Bradley", role: "VP Philanthropy", gender: "female" },
+    { name: "Matt Hausler", role: "VP Social Engagement", gender: "male" },
+    { name: "Lily Cole", role: "VP Membership", gender: "female" },
+    { name: "Hunter Robbins", role: "Director of New Member Recruits", gender: "male" },
+  ];
+
+  const members = [
+    { name: "Layla Abreu", gender: "female" },
+    { name: "Gianni Ager", gender: "male" },
+    { name: "Asma Adiba", gender: "female" },
+    { name: "Alayit Berhanu", gender: "female" },
+    { name: "Justin Burns", gender: "male" },
+    { name: "Michael Duarte", gender: "male" },
+    { name: "Aashi Dugar", gender: "female" },
+    { name: "Lily Ehler", gender: "female" },
+    { name: "Elroi Elias", gender: "male" },
+    { name: "Sophia Gwaltney", gender: "female" },
+    { name: "Dominic Kretzing", gender: "male" },
+    { name: "Hanru Li", gender: "male" },
+    { name: "Peter MacPhail", gender: "male" },
+    { name: "Brianna McDonald", gender: "female" },
+    { name: "Ramya Radhakrishnan", gender: "female" },
+    { name: "Antara Rajgopal", gender: "female" },
+    { name: "Benjamin Sullivan", gender: "male" },
+    { name: "Simha Talreja", gender: "female" },
+    { name: "Ashwin Tripathy", gender: "male" },
+    { name: "Mitchell Vikhman", gender: "male" },
+  ];
+
   return (
     <div className="min-h-screen bg-black">
       <Navigation />
@@ -61,135 +99,19 @@ const Members = () => {
           <div className="mb-20">
             <h2 className="text-3xl font-normal text-white mb-8 text-center">E-Board</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {/* President */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Jasmine Varma" 
-                    className="w-full h-full object-cover"
-                  />
+              {eBoard.map((member, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                    <img 
+                      src={member.gender === "female" ? placeholderFemale : placeholderMale}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-white font-medium text-sm md:text-base">{member.name}</h3>
+                  <p className="text-white/60 text-xs md:text-sm">{member.role}</p>
                 </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Jasmine Varma</h3>
-                <p className="text-white/60 text-xs md:text-sm">President</p>
-              </div>
-
-              {/* VP Internal Affairs */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Kamryn McKinney" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Kamryn McKinney</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Internal Affairs</p>
-              </div>
-
-              {/* VP External Affairs */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Ghazal Tanavade" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Ghazal Tanavade</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP External Affairs</p>
-              </div>
-
-              {/* VP Professional & Technical Development */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Riaz Ahsan" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Riaz Ahsan</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Professional & Technical Development</p>
-              </div>
-
-              {/* VP Marketing */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Julia Suchkova" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Julia Suchkova</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Marketing</p>
-              </div>
-
-              {/* VP Finance */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Nazila Abyaneh" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Nazila Abyaneh</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Finance</p>
-              </div>
-
-              {/* VP Philanthropy */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Morgan Bradley" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Morgan Bradley</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Philanthropy</p>
-              </div>
-
-              {/* VP Social Engagement */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Matt Hausler" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Matt Hausler</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Social Engagement</p>
-              </div>
-
-              {/* VP Membership */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Lily Cole" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Lily Cole</h3>
-                <p className="text-white/60 text-xs md:text-sm">VP Membership</p>
-              </div>
-
-              {/* Director of New Member Recruits */}
-              <div className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
-                  <img 
-                    src="/api/placeholder/128/128" 
-                    alt="Hunter Robbins" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-white font-medium text-sm md:text-base">Hunter Robbins</h3>
-                <p className="text-white/60 text-xs md:text-sm">Director of New Member Recruits</p>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -207,22 +129,16 @@ const Members = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-normal text-white mb-8 text-center">Chapter Members</h3>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-              {[
-                "Layla Abreu", "Gianni Ager", "Asma Adiba", "Alayit Berhanu", 
-                "Justin Burns", "Michael Duarte", "Aashi Dugar", "Lily Ehler",
-                "Elroi Elias", "Sophia Gwaltney", "Dominic Kretzing", "Hanru Li",
-                "Peter MacPhail", "Brianna McDonald", "Ramya Radhakrishnan", "Antara Rajgopal",
-                "Benjamin Sullivan", "Simha Talreja", "Ashwin Tripathy", "Mitchell Vikhman"
-              ].map((name, index) => (
+              {members.map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full mb-2 mx-auto border border-white/20 overflow-hidden">
                     <img 
-                      src="/api/placeholder/80/80" 
-                      alt={name} 
+                      src={member.gender === "female" ? placeholderFemale : placeholderMale}
+                      alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-white text-xs md:text-sm font-medium">{name}</h4>
+                  <h4 className="text-white text-xs md:text-sm font-medium">{member.name}</h4>
                 </div>
               ))}
             </div>
