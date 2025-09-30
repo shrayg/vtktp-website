@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Instagram, Linkedin, MapPin, Clock, Users } from "lucide-react";
+import GradualBlur from "@/components/GradualBlur";
 
 const Contact = () => {
   return (
@@ -167,6 +168,13 @@ const Contact = () => {
           </Card>
         </div>
       </main>
+      <GradualBlur 
+        position="bottom"
+        height="8rem"
+        strength={2}
+        curve="bezier"
+        divCount={5}
+      />
     </div>
   );
 };

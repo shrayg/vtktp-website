@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Users, GraduationCap, Heart, Code, BookOpen } from "lucide-react";
+import GradualBlur from "@/components/GradualBlur";
 
 const About = () => {
   return (
@@ -141,6 +142,13 @@ const About = () => {
           </div>
         </div>
       </main>
+      <GradualBlur 
+        position="bottom"
+        height="8rem"
+        strength={2}
+        curve="bezier"
+        divCount={5}
+      />
     </div>
   );
 };
