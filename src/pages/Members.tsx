@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
-import GradualBlur from "@/components/GradualBlur";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, Code, Users } from "lucide-react";
 import placeholderMale from "@/assets/placeholder-male.png";
@@ -164,14 +163,6 @@ const Members = () => {
           </Card>
         </div>
       </main>
-      <GradualBlur 
-        position="bottom"
-        height="6rem"
-        strength={2}
-        curve="bezier"
-        divCount={5}
-        target="page"
-      />
     </div>
   );
 };

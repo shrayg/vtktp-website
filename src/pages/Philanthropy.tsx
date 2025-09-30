@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Heart, Globe, Users, TreePine } from "lucide-react";
-import GradualBlur from "@/components/GradualBlur";
 
 const Philanthropy = () => {
   return (
@@ -142,14 +141,6 @@ const Philanthropy = () => {
           </Card>
         </div>
       </main>
-      <GradualBlur 
-        position="bottom"
-        height="6rem"
-        strength={2}
-        curve="bezier"
-        divCount={5}
-        target="page"
-      />
     </div>
   );
 };

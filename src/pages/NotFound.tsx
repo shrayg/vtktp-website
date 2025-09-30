@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import GradualBlur from "@/components/GradualBlur";
 
 const NotFound = () => {
   const location = useLocation();
@@ -18,14 +17,6 @@ const NotFound = () => {
           Return to Home
         </a>
       </div>
-      <GradualBlur 
-        position="bottom"
-        height="6rem"
-        strength={2}
-        curve="bezier"
-        divCount={5}
-        target="page"
-      />
     </div>
   );
 };
