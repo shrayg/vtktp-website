@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -51,20 +52,7 @@ export const Navigation = () => {
                       {link.label}
                     </Link>
                   ))}
-                  <Button 
-                    variant="outline" 
-                    className="bg-white text-black border-white hover:bg-white/90 font-medium mt-4"
-                    asChild
-                  >
-                    <a 
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      onClick={() => setOpen(false)}
-                    >
-                      Join KTP
-                    </a>
-                  </Button>
+                  <ThemeToggle />
                 </div>
               </SheetContent>
             </Sheet>
@@ -96,16 +84,8 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop Join Button */}
-          <Button 
-            variant="outline" 
-            className="hidden md:flex bg-white text-black border-white hover:bg-white/90 font-medium"
-            asChild
-          >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
-              Join KTP
-            </a>
-          </Button>
+          {/* Desktop Theme Toggle */}
+          <ThemeToggle />
         </div>
       </div>
     </nav>
