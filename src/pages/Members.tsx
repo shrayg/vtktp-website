@@ -56,91 +56,178 @@ const Members = () => {
             </Card>
           </div>
 
-          {/* Member Highlights */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-normal text-white mb-8">Diverse Backgrounds</h2>
-              <div className="space-y-6">
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <h3 className="text-lg font-medium text-white mb-2">Academic Diversity</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    Our members represent over 12 different majors across Virginia Tech, from 
-                    Computer Science and Engineering to Business and Liberal Arts. This diversity 
-                    brings fresh perspectives to every project and discussion.
-                  </p>
-                </Card>
+          {/* E-Board Section */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-normal text-white mb-8 text-center">E-Board</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {/* President */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Jasmine Varma" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Jasmine Varma</h3>
+                <p className="text-white/60 text-xs md:text-sm">President</p>
+              </div>
 
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <h3 className="text-lg font-medium text-white mb-2">Industry Experience</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    Our brothers have interned and worked at top companies including Google, 
-                    Microsoft, Amazon, Apple, Facebook, and countless startups, bringing real-world 
-                    experience back to our chapter.
-                  </p>
-                </Card>
+              {/* VP Internal Affairs */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Kamryn McKinney" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Kamryn McKinney</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Internal Affairs</p>
+              </div>
 
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <h3 className="text-lg font-medium text-white mb-2">Leadership Development</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    Many of our members hold leadership positions in other organizations on campus, 
-                    from engineering honor societies to startup accelerators, demonstrating the 
-                    leadership skills KTP helps develop.
-                  </p>
-                </Card>
+              {/* VP External Affairs */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Ghazal Tanavade" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Ghazal Tanavade</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP External Affairs</p>
+              </div>
+
+              {/* VP Professional & Technical Development */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Riaz Ahsan" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Riaz Ahsan</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Professional & Technical Development</p>
+              </div>
+
+              {/* VP Marketing */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Julia Suchkova" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Julia Suchkova</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Marketing</p>
+              </div>
+
+              {/* VP Finance */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Nazila Abyaneh" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Nazila Abyaneh</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Finance</p>
+              </div>
+
+              {/* VP Philanthropy */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Morgan Bradley" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Morgan Bradley</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Philanthropy</p>
+              </div>
+
+              {/* VP Social Engagement */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Matt Hausler" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Matt Hausler</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Social Engagement</p>
+              </div>
+
+              {/* VP Membership */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Lily Cole" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Lily Cole</h3>
+                <p className="text-white/60 text-xs md:text-sm">VP Membership</p>
+              </div>
+
+              {/* Director of New Member Recruits */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <img 
+                    src="/api/placeholder/128/128" 
+                    alt="Hunter Robbins" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-sm md:text-base">Hunter Robbins</h3>
+                <p className="text-white/60 text-xs md:text-sm">Director of New Member Recruits</p>
               </div>
             </div>
+          </div>
 
-            <div>
-              <h2 className="text-3xl font-normal text-white mb-8">Member Success</h2>
-              <div className="space-y-6">
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-medium">JD</span>
-                    </div>
-                    <div>
-                      <h3 className="text-white font-medium mb-1">John Doe</h3>
-                      <p className="text-white/60 text-sm mb-2">Computer Science '23</p>
-                      <p className="text-white/70 text-sm">
-                        "KTP provided me with the network and skills I needed to land my dream job at Google. 
-                        The professional development workshops were invaluable."
-                      </p>
-                    </div>
-                  </div>
-                </Card>
+          {/* Meet Our Chapter */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-normal text-white mb-6">Meet Our Chapter</h2>
+            <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed">
+              Our chapter is made up of diverse, talented students from various backgrounds and majors, 
+              all united by our passion for technology. From computer science to engineering, business to design, 
+              our members bring unique perspectives and skills to our community.
+            </p>
+          </div>
 
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-medium">AS</span>
-                    </div>
-                    <div>
-                      <h3 className="text-white font-medium mb-1">Alex Smith</h3>
-                      <p className="text-white/60 text-sm mb-2">Business Information Technology '24</p>
-                      <p className="text-white/70 text-sm">
-                        "The mentorship I received through KTP was incredible. Having upperclassmen 
-                        guide me through my career journey made all the difference."
-                      </p>
-                    </div>
+          {/* Chapter Members */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-normal text-white mb-8 text-center">Chapter Members</h3>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
+              {[
+                "Layla Abreu", "Gianni Ager", "Asma Adiba", "Alayit Berhanu", 
+                "Justin Burns", "Michael Duarte", "Aashi Dugar", "Lily Ehler",
+                "Elroi Elias", "Sophia Gwaltney", "Dominic Kretzing", "Hanru Li",
+                "Peter MacPhail", "Brianna McDonald", "Ramya Radhakrishnan", "Antara Rajgopal",
+                "Benjamin Sullivan", "Simha Talreja", "Ashwin Tripathy", "Mitchell Vikhman",
+                "Alex Chen", "Sarah Johnson", "David Park", "Emma Williams",
+                "James Rodriguez", "Maya Patel", "Ryan Thompson", "Zoe Anderson",
+                "Noah Kumar", "Grace Lee", "Tyler Davis", "Ava Martinez",
+                "Lucas Brown", "Sofia Wilson", "Ethan Garcia", "Mia Taylor"
+              ].map((name, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full mb-2 mx-auto border border-white/20 overflow-hidden">
+                    <img 
+                      src="/api/placeholder/80/80" 
+                      alt={name} 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </Card>
-
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-medium">MJ</span>
-                    </div>
-                    <div>
-                      <h3 className="text-white font-medium mb-1">Maria Johnson</h3>
-                      <p className="text-white/60 text-sm mb-2">Electrical Engineering '25</p>
-                      <p className="text-white/70 text-sm">
-                        "KTP isn't just about professional development - it's about finding your family 
-                        at Tech. The friendships I've made here will last a lifetime."
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+                  <h4 className="text-white text-xs md:text-sm font-medium">{name}</h4>
+                </div>
+              ))}
             </div>
           </div>
 
