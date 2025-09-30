@@ -24,7 +24,7 @@ const Members = () => {
 
           {/* Member Statistics */}
           <div className="grid md:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-white/5 border-white/10 p-6 text-center">
+            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
               <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
@@ -32,7 +32,7 @@ const Members = () => {
               <div className="text-white/60 text-sm">Active Members</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center">
+            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
               <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
@@ -40,7 +40,7 @@ const Members = () => {
               <div className="text-white/60 text-sm">Different Majors</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center">
+            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
               <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
@@ -48,7 +48,7 @@ const Members = () => {
               <div className="text-white/60 text-sm">Job Placement Rate</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center">
+            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
               <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
@@ -229,7 +229,7 @@ const Members = () => {
           </div>
 
           {/* Join CTA */}
-          <Card className="bg-white/5 border-white/10 p-12 text-center">
+          <Card className="bg-white/5 border-white/10 p-12 text-center transition-transform duration-200 hover:scale-105">
             <h2 className="text-3xl font-normal text-white mb-4">Ready to Join Our Brotherhood?</h2>
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
               We welcome students from all majors who share our passion for technology and 

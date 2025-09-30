@@ -23,15 +23,15 @@ const Philanthropy = () => {
 
           {/* Impact Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
+            <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
               <div className="text-3xl font-bold text-white mb-2">50+</div>
               <div className="text-white/60">Hours of Community Service</div>
             </Card>
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
+            <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
               <div className="text-3xl font-bold text-white mb-2">10+</div>
               <div className="text-white/60">Community Partners</div>
             </Card>
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
+            <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
               <div className="text-3xl font-bold text-white mb-2">$2,000+</div>
               <div className="text-white/60">Raised for Local Charities</div>
             </Card>
@@ -39,7 +39,7 @@ const Philanthropy = () => {
 
           {/* Initiatives */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <Card className="bg-white/5 border-white/10 p-8">
+            <Card className="bg-white/5 border-white/10 p-8 transition-transform duration-200 hover:scale-105">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center">
                   <Heart className="w-6 h-6 text-white" />
@@ -58,7 +58,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-8">
+            <Card className="bg-white/5 border-white/10 p-8 transition-transform duration-200 hover:scale-105">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center">
                   <Users className="w-6 h-6 text-white" />
@@ -77,7 +77,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-8">
+            <Card className="bg-white/5 border-white/10 p-8 transition-transform duration-200 hover:scale-105">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center">
                   <TreePine className="w-6 h-6 text-white" />
@@ -96,7 +96,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-8">
+            <Card className="bg-white/5 border-white/10 p-8 transition-transform duration-200 hover:scale-105">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center">
                   <Globe className="w-6 h-6 text-white" />

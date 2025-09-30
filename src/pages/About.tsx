@@ -83,7 +83,7 @@ const About = () => {
             <h2 className="text-3xl font-normal text-white mb-16">Our 5 Pillars</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-              <Card className="bg-white/5 border-white/10 p-8 text-center">
+              <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
                   <Users className="w-6 h-6 text-white" />
                 </div>
@@ -95,7 +95,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 p-8 text-center">
+              <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
                   <GraduationCap className="w-6 h-6 text-white" />
                 </div>
@@ -106,7 +106,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 p-8 text-center">
+              <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
@@ -117,7 +117,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 p-8 text-center">
+              <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
                   <Code className="w-6 h-6 text-white" />
                 </div>
@@ -128,7 +128,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 p-8 text-center">
+              <Card className="bg-white/5 border-white/10 p-8 text-center transition-transform duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
