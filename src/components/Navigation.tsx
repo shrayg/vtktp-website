@@ -31,12 +31,12 @@ export const Navigation = () => {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className="text-white hover:bg-white/10"
+                  className="text-foreground hover:bg-muted"
                 >
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-black border-white/10 w-64">
+              <SheetContent side="left" className="bg-background border-border w-64">
                 <div className="flex flex-col gap-6 mt-8">
                   {navLinks.map((link) => (
                     <Link
@@ -45,8 +45,8 @@ export const Navigation = () => {
                       onClick={() => setOpen(false)}
                       className={`text-base transition-colors ${
                         isActive(link.path) 
-                          ? 'text-white font-medium' 
-                          : 'text-white/70 hover:text-white'
+                          ? 'text-foreground font-medium' 
+                          : 'text-muted-foreground hover:text-foreground'
                       }`}
                     >
                       {link.label}
@@ -75,8 +75,8 @@ export const Navigation = () => {
                 to={link.path}
                 className={`text-sm transition-colors ${
                   isActive(link.path) 
-                    ? 'text-white' 
-                    : 'text-white/70 hover:text-white'
+                    ? 'text-foreground' 
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {link.label}

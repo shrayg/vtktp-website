@@ -43,17 +43,17 @@ const Members = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="pt-20 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-normal text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
               Our Brotherhood
             </h1>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Meet the diverse group of students who make up KTP's Alpha Gamma chapter. 
               From computer science to business, our members bring unique perspectives to technology.
             </p>
@@ -61,54 +61,54 @@ const Members = () => {
 
           {/* Member Statistics */}
           <div className="grid md:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
+            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+              <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-white mb-1">45+</div>
-              <div className="text-white/60 text-sm">Active Members</div>
+              <div className="text-2xl font-bold text-foreground mb-1">45+</div>
+              <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-6 h-6 text-white" />
+            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+              <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-white mb-1">12+</div>
-              <div className="text-white/60 text-sm">Different Majors</div>
+              <div className="text-2xl font-bold text-foreground mb-1">12+</div>
+              <div className="text-muted-foreground text-sm">Different Majors</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="w-6 h-6 text-white" />
+            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+              <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-white mb-1">95%</div>
-              <div className="text-white/60 text-sm">Job Placement Rate</div>
+              <div className="text-2xl font-bold text-foreground mb-1">95%</div>
+              <div className="text-muted-foreground text-sm">Job Placement Rate</div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-6 text-center transition-transform duration-200 hover:scale-105">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Code className="w-6 h-6 text-white" />
+            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+              <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
+                <Code className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-white mb-1">50+</div>
-              <div className="text-white/60 text-sm">Companies Represented</div>
+              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
+              <div className="text-muted-foreground text-sm">Companies Represented</div>
             </Card>
           </div>
 
           {/* E-Board Section */}
           <div className="mb-20">
-            <h2 className="text-3xl font-normal text-white mb-8 text-center">E-Board</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-8 text-center">E-Board</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {eBoard.map((member, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-full mb-4 mx-auto border border-white/20 overflow-hidden">
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-full mb-4 mx-auto border border-border overflow-hidden">
                     <img 
                       src={member.gender === "female" ? placeholderFemale : placeholderMale}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-white font-medium text-sm md:text-base">{member.name}</h3>
-                  <p className="text-white/60 text-xs md:text-sm">{member.role}</p>
+                  <h3 className="text-foreground font-medium text-sm md:text-base">{member.name}</h3>
+                  <p className="text-muted-foreground text-xs md:text-sm">{member.role}</p>
                 </div>
               ))}
             </div>
@@ -116,8 +116,8 @@ const Members = () => {
 
           {/* Meet Our Chapter */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-white mb-6">Meet Our Chapter</h2>
-            <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed">
+            <h2 className="text-3xl font-normal text-foreground mb-6">Meet Our Chapter</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Our chapter is made up of diverse, talented students from various backgrounds and majors, 
               all united by our passion for technology. From computer science to engineering, business to design, 
               our members bring unique perspectives and skills to our community.
@@ -126,34 +126,34 @@ const Members = () => {
 
           {/* Chapter Members */}
           <div className="mb-16">
-            <h3 className="text-2xl font-normal text-white mb-8 text-center">Chapter Members</h3>
+            <h3 className="text-2xl font-normal text-foreground mb-8 text-center">Chapter Members</h3>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
               {members.map((member, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full mb-2 mx-auto border border-white/20 overflow-hidden">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
                     <img 
                       src={member.gender === "female" ? placeholderFemale : placeholderMale}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-white text-xs md:text-sm font-medium">{member.name}</h4>
+                  <h4 className="text-foreground text-xs md:text-sm font-medium">{member.name}</h4>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Join CTA */}
-          <Card className="bg-white/5 border-white/10 p-12 text-center transition-transform duration-200 hover:scale-105">
-            <h2 className="text-3xl font-normal text-white mb-4">Ready to Join Our Brotherhood?</h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
+          <Card className="bg-card border-border p-12 text-center transition-transform duration-200 hover:scale-105">
+            <h2 className="text-3xl font-normal text-foreground mb-4">Ready to Join Our Brotherhood?</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               We welcome students from all majors who share our passion for technology and 
               professional growth. Join a community that will support you throughout your 
               college career and beyond.
             </p>
             <Button 
               variant="outline" 
-              className="bg-white text-black border-white hover:bg-white/90 font-medium px-8 py-3"
+              className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium px-8 py-3"
               asChild
             >
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
