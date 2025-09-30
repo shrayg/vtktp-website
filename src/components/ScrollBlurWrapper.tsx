@@ -9,8 +9,15 @@ export const ScrollBlurWrapper = ({ children }: ScrollBlurWrapperProps) => {
   const isScrolling = useScrollBlur();
   
   return (
-    <div className={`transition-all duration-150 ${isScrolling ? "motion-blur-scrolling" : ""}`}>
-      {children}
+    <div className="relative">
+      <div 
+        className="transition-all duration-100 ease-out"
+        style={{
+          filter: isScrolling ? "blur(2px)" : "blur(0px)",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };

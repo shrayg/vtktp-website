@@ -12,7 +12,7 @@ export const useScrollBlur = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         setIsScrolling(false);
-      }, 150);
+      }, 50);
     };
     
     window.addEventListener("scroll", handleScroll, true);

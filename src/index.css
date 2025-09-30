@@ -83,10 +83,3 @@
     font-weight: 500; /* Satoshi Medium */
   }
 }
-
-@layer utilities {
-  .motion-blur-scrolling {
-    filter: blur(2px);
-    transform: translateZ(0);
-  }
-}
