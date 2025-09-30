@@ -44,12 +44,12 @@ const Contact = () => {
               <h3 className="text-lg font-medium text-white mb-2">Instagram</h3>
               <p className="text-white/60 text-sm mb-4">Follow us for updates and events</p>
               <a 
-                href="https://instagram.com/ktp_vt" 
+                href="https://www.instagram.com/vtktp/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-white text-black text-sm font-medium rounded-sm hover:bg-white/90 transition-colors"
               >
-                @ktp_vt
+                @vtktp
               </a>
             </Card>
 
