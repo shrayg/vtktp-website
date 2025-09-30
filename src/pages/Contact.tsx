@@ -1,9 +1,27 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram, Linkedin, MapPin, Clock, Users } from "lucide-react";
+import { Mail, Instagram, Linkedin, MapPin, Clock, Users, Check } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [showCheck, setShowCheck] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("ktp@vt.edu");
+      setShowCheck(true);
+      toast({
+        description: "Copied",
+        duration: 2000,
+      });
+      setTimeout(() => setShowCheck(false), 1000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
+  };
   return (
     <div className="min-h-screen bg-black">
       <Navigation />
@@ -29,12 +47,12 @@ const Contact = () => {
               </div>
               <h3 className="text-lg font-medium text-white mb-2">Email</h3>
               <p className="text-white/60 text-sm mb-4">Get in touch with our leadership team</p>
-              <a 
-                href="mailto:ktp@vt.edu" 
-                className="inline-flex items-center justify-center px-4 py-2 bg-white text-black text-sm font-medium rounded-sm hover:bg-white/90 transition-colors"
+              <button 
+                onClick={handleCopyEmail}
+                className="inline-flex items-center justify-center px-4 py-2 bg-white text-black text-sm font-medium rounded-sm hover:bg-white/90 transition-all cursor-pointer"
               >
-                ktp@vt.edu
-              </a>
+                {showCheck ? <Check className="w-4 h-4" /> : "ktp@vt.edu"}
+              </button>
             </Card>
 
             <Card className="bg-white/5 border-white/10 p-8 text-center">
