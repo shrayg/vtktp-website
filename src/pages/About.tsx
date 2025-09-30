@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
-import { Users, Target, Award, Code } from "lucide-react";
+import { Users, GraduationCap, Heart, Code, BookOpen } from "lucide-react";
 
 const About = () => {
   return (
@@ -20,43 +20,8 @@ const About = () => {
             </p>
           </div>
 
-          {/* Mission Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Community</h3>
-              <p className="text-white/60 text-sm">Building lasting relationships with like-minded tech enthusiasts</p>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Target className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Professional</h3>
-              <p className="text-white/60 text-sm">Developing career skills and industry connections</p>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Technology</h3>
-              <p className="text-white/60 text-sm">Exploring cutting-edge innovations and technical excellence</p>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 p-8 text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Excellence</h3>
-              <p className="text-white/60 text-sm">Striving for the highest standards in all endeavors</p>
-            </Card>
-          </div>
-
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <h2 className="text-3xl font-normal text-white mb-6">
                 Our Mission
@@ -110,6 +75,69 @@ const About = () => {
                 </li>
               </ul>
             </Card>
+          </div>
+
+          {/* Our 5 Pillars */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-normal text-white mb-16">Our 5 Pillars</h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+              <Card className="bg-white/5 border-white/10 p-8 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-4">Professional Development</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  We focus on building essential professional skills including networking, resume building, 
+                  interview preparation, and industry knowledge to prepare our members for successful careers 
+                  in technology.
+                </p>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 p-8 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-4">Alumni Mentorship</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Our members benefit from direct mentorship relationships with KTP alumni who provide 
+                  guidance, career advice, and real-world insights from their experiences in the tech industry.
+                </p>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 p-8 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-4">Social Growth</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  We foster meaningful friendships and social connections through various events, activities, 
+                  and shared experiences that create lasting bonds within our community.
+                </p>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 p-8 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
+                  <Code className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-4">Technical Advancement</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Our members stay current with the latest technologies through workshops, hackathons, 
+                  coding challenges, and hands-on projects that enhance technical skills and knowledge.
+                </p>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 p-8 text-center">
+                <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-6">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-medium text-white mb-4">Academic Support</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  We provide academic resources, study groups, tutoring opportunities, and peer support 
+                  to help our members excel in their coursework and achieve their educational goals.
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </main>
