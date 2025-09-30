@@ -47,16 +47,47 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        
+        /* Vars.gg specific colors */
+        vars: {
+          blue: "hsl(var(--vars-blue))",
+          green: "hsl(var(--vars-green))",
+          purple: "hsl(var(--vars-purple))",
+          orange: "hsl(var(--vars-orange))",
+          red: "hsl(var(--vars-red))",
         },
+        
+        /* Code editor colors */
+        code: {
+          bg: "hsl(var(--code-bg))",
+          border: "hsl(var(--code-border))",
+          lineNumber: "hsl(var(--code-line-number))",
+          keyword: "hsl(var(--code-keyword))",
+          string: "hsl(var(--code-string))",
+          comment: "hsl(var(--code-comment))",
+        },
+      },
+      
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+        'sm': 'var(--shadow-sm)',
+        'md': 'var(--shadow-md)',
+        'lg': 'var(--shadow-lg)',
+      },
+      
+      fontFamily: {
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
+      },
+      
+      transitionTimingFunction: {
+        'fast': 'var(--transition-fast)',
+        'normal': 'var(--transition-normal)',
       },
       borderRadius: {
         lg: "var(--radius)",
