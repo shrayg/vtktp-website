@@ -27,8 +27,8 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Connect</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="https://instagram.com/ktp_vt" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">LinkedIn</a></li>
               <li><a href="mailto:ktp@vt.edu" className="hover:text-foreground transition-colors">Email</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Discord</a></li>
               <li><a href="https://ktpvt.com" className="hover:text-foreground transition-colors">Website</a></li>
             </ul>
           </div>

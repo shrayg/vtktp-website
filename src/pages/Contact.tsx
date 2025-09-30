@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram, MessageSquare, MapPin, Clock, Users } from "lucide-react";
+import { Mail, Instagram, Linkedin, MapPin, Clock, Users } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -55,15 +55,17 @@ const Contact = () => {
 
             <Card className="bg-white/5 border-white/10 p-8 text-center">
               <div className="w-12 h-12 bg-white/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-6 h-6 text-white" />
+                <Linkedin className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-medium text-white mb-2">Discord</h3>
-              <p className="text-white/60 text-sm mb-4">Join our community server</p>
+              <h3 className="text-lg font-medium text-white mb-2">LinkedIn</h3>
+              <p className="text-white/60 text-sm mb-4">Connect with us professionally</p>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-white text-black text-sm font-medium rounded-sm hover:bg-white/90 transition-colors"
               >
-                Join Server
+                Follow Us
               </a>
             </Card>
           </div>
