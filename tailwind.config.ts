@@ -82,6 +82,7 @@ export default {
       },
       
       fontFamily: {
+        sans: ['Satoshi', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
       },
       

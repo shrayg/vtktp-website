@@ -211,11 +211,7 @@ const Members = () => {
                 "Justin Burns", "Michael Duarte", "Aashi Dugar", "Lily Ehler",
                 "Elroi Elias", "Sophia Gwaltney", "Dominic Kretzing", "Hanru Li",
                 "Peter MacPhail", "Brianna McDonald", "Ramya Radhakrishnan", "Antara Rajgopal",
-                "Benjamin Sullivan", "Simha Talreja", "Ashwin Tripathy", "Mitchell Vikhman",
-                "Alex Chen", "Sarah Johnson", "David Park", "Emma Williams",
-                "James Rodriguez", "Maya Patel", "Ryan Thompson", "Zoe Anderson",
-                "Noah Kumar", "Grace Lee", "Tyler Davis", "Ava Martinez",
-                "Lucas Brown", "Sofia Wilson", "Ethan Garcia", "Mia Taylor"
+                "Benjamin Sullivan", "Simha Talreja", "Ashwin Tripathy", "Mitchell Vikhman"
               ].map((name, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full mb-2 mx-auto border border-white/20 overflow-hidden">
