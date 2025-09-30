@@ -114,11 +114,6 @@ npx shadcn@latest add <component-name>
 1. Connect your GitHub repository to Vercel
 2. Deploy automatically on push to main branch
 
-### Other Platforms
-The project can be deployed to any platform that supports Next.js:
-- Netlify
-- Railway
-- DigitalOcean App Platform
 
 ## 📝 Migration Notes
 
@@ -142,11 +137,3 @@ The project can be deployed to any platform that supports Next.js:
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
-
-## 📄 License
-
-This project is for the Kappa Theta Pi Virginia Tech chapter.
-
-## 🆘 Support
-
-For questions about the migration or technical issues, please contact the development team.
