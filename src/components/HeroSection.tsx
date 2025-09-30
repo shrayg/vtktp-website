@@ -18,20 +18,28 @@ export const HeroSection = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal mb-8 text-white leading-[1.1] tracking-tight">
-          Competitive coding,
+          The Premier Professional
           <br />
-          just 10x better.
+          Technology Fraternity
+          <br />
+          <span className="text-white/60">at Virginia Tech</span>
         </h1>
         
         <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-          Fast-paced, realtime coding duels. LeetCode meets
+          Kappa Theta Pi fosters a community of students passionate
           <br />
-          Chess.com, all within your browser.
+          about technology and innovation.
         </p>
 
-        <Button variant="outline" className="bg-white text-black border-white hover:bg-white/90 font-medium px-6 py-3 text-base">
-          Get started
-          <ArrowRight className="w-4 h-4 ml-2" />
+        <Button 
+          variant="outline" 
+          className="bg-white text-black border-white hover:bg-white/90 font-medium px-6 py-3 text-base"
+          asChild
+        >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
+            Fall 2025 Interest Form
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </a>
         </Button>
       </div>
     </section>

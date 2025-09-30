@@ -1,17 +1,17 @@
-interface VarsLogoProps {
+interface KTPLogoProps {
   className?: string;
 }
 
-export const VarsLogo = ({ className = "" }: VarsLogoProps) => {
+export const KTPLogo = ({ className = "" }: KTPLogoProps) => {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Geometric V-shaped logo to match vars.gg */}
-      <div className="w-7 h-7 flex items-center justify-center">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="text-white">
-          <path d="M8 8L14 20L20 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      {/* Greek letters KTP styled logo */}
+      <div className="w-8 h-8 flex items-center justify-center">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="text-white">
+          <text x="16" y="20" textAnchor="middle" className="text-white font-bold text-lg fill-current">ΚΘΠ</text>
         </svg>
       </div>
-      <span className="text-xl font-medium text-white">vars.gg</span>
+      <span className="text-xl font-medium text-white">KTP VT</span>
     </div>
   );
 };
