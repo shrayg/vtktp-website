@@ -20,7 +20,7 @@ const NotFound = () => {
       </div>
       <GradualBlur 
         position="bottom"
-        height="8rem"
+        height="6rem"
         strength={2}
         curve="bezier"
         divCount={5}
