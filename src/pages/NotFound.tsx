@@ -24,6 +24,7 @@ const NotFound = () => {
         strength={2}
         curve="bezier"
         divCount={5}
+        target="page"
       />
     </div>
   );
