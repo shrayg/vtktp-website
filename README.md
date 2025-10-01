@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# Kappa Theta Pi Virginia Tech Website
 
-## Project info
+This is the official website for the Kappa Theta Pi chapter at Virginia Tech, built with Next.js, React, Tailwind CSS, and TypeScript.
 
-**URL**: https://lovable.dev/projects/16156b65-9f78-40d7-a76f-f463f82d624d
+## Table of Contents
+- [Overview](#overview)
+- [Frameworks & Libraries](#frameworks--libraries)
+- [Project Structure](#project-structure)
+- [Setup & Development](#setup--development)
+- [Deployment](#deployment)
+- [License](#license)
 
-## How can I edit this code?
+## Overview
+This site provides information about Kappa Theta Pi at Virginia Tech, including our mission, members, philanthropy, and contact information. It is a modern, responsive web app using the latest web technologies.
 
-There are several ways of editing your application.
+## Frameworks & Libraries
+- **Next.js**: React-based framework for server-side rendering, static site generation, and routing.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **TypeScript**: Typed superset of JavaScript for type safety.
+- **PostCSS**: CSS processing tool (used by Tailwind).
+- **ESLint**: Linting for code quality and consistency.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/16156b65-9f78-40d7-a76f-f463f82d624d) and start prompting.
+## Setup & Development
 
-Changes made via Lovable will be committed automatically to this repo.
+1. **Install dependencies:**
+	```bash
+	npm install
+	```
+2. **Run the development server:**
+	```bash
+	npm run dev
+	```
+3. Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-**Use your preferred IDE**
+## Deployment
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This site is designed for deployment on platforms like Netlify or Vercel.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- For static export, use:
+  ```bash
+  npm run build && npm run export
+  ```
+  and set the publish directory to `out/`.
+- For SSR and dynamic routes, use the official Netlify Next.js plugin or deploy to Vercel.
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui
+- **Language**: TypeScript
+- **Deployment**: Ready for Vercel
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd ktp-nextjs
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run build
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:3000`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Design System
 
-## What technologies are used for this project?
+### Colors
+- Primary Blue: `#2B4D89`
+- Accent Green: `#3CB371`
+- Background: `#f4f8fb`
 
-This project is built with:
+### Components
+- **Sidebar**: Responsive navigation with mobile menu
+- **Social Icons**: Fixed position social media links
+- **Cards**: Content containers with consistent styling
+- **Buttons**: Interactive elements with hover states
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Configuration
 
-## How can I deploy this project?
+### Tailwind CSS
+The project uses Tailwind CSS v4 with custom color configuration matching the original design.
 
-Simply open [Lovable](https://lovable.dev/projects/16156b65-9f78-40d7-a76f-f463f82d624d) and click on Share -> Publish.
+### shadcn/ui
+Components are installed as needed using:
+```bash
+npx shadcn@latest add <component-name>
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
+### Netlify
+1. Connect your GitHub repository to Netlify Project
+2. Deploy automatically on push to main branch
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## For Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
