@@ -18,7 +18,7 @@ export const HeroSection = () => {
       />
 
       {/* ASCII Text Effect - Desktop Only */}
-      <div className="hidden lg:block relative w-full h-[600px] mb-12">
+      <div className="hidden lg:block relative w-full h-[600px] mb-4 ascii-container">
         <ASCIIText 
           text="KTP"
           asciiFontSize={10}
@@ -29,7 +29,13 @@ export const HeroSection = () => {
         />
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-8">
+      <style>{`
+        .light .ascii-container {
+          filter: invert(1);
+        }
+      `}</style>
+      
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="lg:hidden text-5xl md:text-6xl font-normal mb-8 text-foreground leading-[1.1] tracking-tight">
           The Premier Professional
           <br />
