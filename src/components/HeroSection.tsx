@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ASCIIText from "./ASCIIText";
+import { lazy, Suspense } from "react";
+
+// Lazy load the heavy ASCIIText component with Three.js
+const ASCIIText = lazy(() => import("./ASCIIText"));
 
 export const HeroSection = () => {
   return (
@@ -19,14 +22,20 @@ export const HeroSection = () => {
 
       {/* ASCII Text Effect - Desktop Only (xl breakpoint excludes tablets) */}
       <div className="hidden xl:flex relative w-full max-w-4xl mx-auto px-6 h-[600px] mb-4 ascii-container items-center justify-center">
-        <ASCIIText 
-          text="KTP"
-          asciiFontSize={10}
-          textFontSize={300}
-          textColor="#fdf9f3"
-          planeBaseHeight={12}
-          enableWaves={true}
-        />
+        <Suspense fallback={
+          <div className="flex items-center justify-center h-full">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-foreground"></div>
+          </div>
+        }>
+          <ASCIIText 
+            text="KTP"
+            asciiFontSize={10}
+            textFontSize={300}
+            textColor="#fdf9f3"
+            planeBaseHeight={12}
+            enableWaves={true}
+          />
+        </Suspense>
       </div>
       
       <style>{`
