@@ -18,19 +18,19 @@ export const HeroSection = () => {
       />
 
       {/* ASCII Text Effect - Desktop Only */}
-      <div className="hidden lg:block relative w-full h-[400px] mb-8">
+      <div className="hidden lg:block relative w-full h-[600px] mb-12">
         <ASCIIText 
           text="KTP"
-          asciiFontSize={8}
-          textFontSize={200}
+          asciiFontSize={10}
+          textFontSize={300}
           textColor="#fdf9f3"
-          planeBaseHeight={8}
+          planeBaseHeight={12}
           enableWaves={true}
         />
       </div>
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-8">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal mb-8 text-foreground leading-[1.1] tracking-tight">
+        <h1 className="lg:hidden text-5xl md:text-6xl font-normal mb-8 text-foreground leading-[1.1] tracking-tight">
           The Premier Professional
           <br />
           Technology Fraternity
