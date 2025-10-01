@@ -4,8 +4,26 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, Code, Users } from "lucide-react";
 import placeholderMale from "@/assets/placeholder-male.png";
 import placeholderFemale from "@/assets/placeholder-female.png";
+import { AccentBar } from "@/components/AccentBar";
 
 const Members = () => {
+  // Function to get member image based on last name
+  const getMemberImage = (name: string, gender: string, isEboard: boolean = false) => {
+    const lastName = name.split(' ').pop()?.toLowerCase();
+    if (!lastName) return gender === "female" ? placeholderFemale : placeholderMale;
+    
+    const folder = isEboard ? 'eboard' : 'chapter';
+    const imagePath = `/ktppictures/members/${folder}/${lastName}.jpg`;
+    
+    return imagePath;
+  };
+
+  // Function to handle image load errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, gender: string) => {
+    const target = e.target as HTMLImageElement;
+    target.src = gender === "female" ? placeholderFemale : placeholderMale;
+  };
+
   const eBoard = [
     { name: "Jasmine Varma", role: "President", gender: "female" },
     { name: "Kamryn McKinney", role: "VP Internal Affairs", gender: "female" },
@@ -53,6 +71,9 @@ const Members = () => {
             <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
               Our Brotherhood
             </h1>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="lg" />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Meet the diverse group of students who make up KTP's Alpha Gamma chapter. 
               From computer science to business, our members bring unique perspectives to technology.
@@ -65,7 +86,7 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">45+</div>
+              <div className="text-2xl font-bold text-foreground mb-1">#</div>
               <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
@@ -73,7 +94,7 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">12+</div>
+              <div className="text-2xl font-bold text-foreground mb-1">#</div>
               <div className="text-muted-foreground text-sm">Different Majors</div>
             </Card>
 
@@ -81,7 +102,7 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">95%</div>
+              <div className="text-2xl font-bold text-foreground mb-1">#</div>
               <div className="text-muted-foreground text-sm">Job Placement Rate</div>
             </Card>
 
@@ -89,22 +110,26 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Code className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
-              <div className="text-muted-foreground text-sm">Companies Represented</div>
+              <div className="text-2xl font-bold text-foreground mb-1">#</div>
+              <div className="text-muted-foreground text-sm">Placeholder</div>
             </Card>
           </div>
 
           {/* E-Board Section */}
           <div className="mb-20">
-            <h2 className="text-3xl font-normal text-foreground mb-8 text-center">E-Board</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-4 text-center">E-Board</h2>
+            <div className="flex justify-center mb-8">
+              <AccentBar color="green" size="md" />
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {eBoard.map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-full mb-4 mx-auto border border-border overflow-hidden">
                     <img 
-                      src={member.gender === "female" ? placeholderFemale : placeholderMale}
+                      src={getMemberImage(member.name, member.gender, true)}
                       alt={member.name}
                       className="w-full h-full object-cover"
+                      onError={(e) => handleImageError(e, member.gender)}
                     />
                   </div>
                   <h3 className="text-foreground font-medium text-sm md:text-base">{member.name}</h3>
@@ -116,7 +141,10 @@ const Members = () => {
 
           {/* Meet Our Chapter */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-6">Meet Our Chapter</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-4">Meet Our Chapter</h2>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="md" />
+            </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Our chapter is made up of diverse, talented students from various backgrounds and majors, 
               all united by our passion for technology. From computer science to engineering, business to design, 
@@ -126,15 +154,19 @@ const Members = () => {
 
           {/* Chapter Members */}
           <div className="mb-16">
-            <h3 className="text-2xl font-normal text-foreground mb-8 text-center">Chapter Members</h3>
+            <h3 className="text-2xl font-normal text-foreground mb-4 text-center">Chapter Members</h3>
+            <div className="flex justify-center mb-8">
+              <AccentBar color="green" size="sm" />
+            </div>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
               {members.map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
                     <img 
-                      src={member.gender === "female" ? placeholderFemale : placeholderMale}
+                      src={getMemberImage(member.name, member.gender, false)}
                       alt={member.name}
                       className="w-full h-full object-cover"
+                      onError={(e) => handleImageError(e, member.gender)}
                     />
                   </div>
                   <h4 className="text-foreground text-xs md:text-sm font-medium">{member.name}</h4>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Instagram, Linkedin, MapPin, Clock, Users, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { AccentBar } from "@/components/AccentBar";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -33,6 +34,9 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
               Get in Touch
             </h1>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="lg" />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Have questions about KTP? Interested in joining? Want to partner with us? 
               We'd love to hear from you.

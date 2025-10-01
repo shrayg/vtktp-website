@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Users, GraduationCap, Heart, Code, BookOpen } from "lucide-react";
+import { AboutSlideshow } from "@/components/AboutSlideshow";
+import { AccentBar } from "@/components/AccentBar";
 
 const About = () => {
   return (
@@ -14,6 +16,9 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
               About Kappa Theta Pi
             </h1>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="lg" />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               The Alpha Gamma chapter at Virginia Tech focuses on professional development, 
               networking, and creating lasting friendships among members.
@@ -23,16 +28,22 @@ const About = () => {
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-normal text-foreground mb-6">
+              <h2 className="text-3xl font-normal text-foreground mb-4">
                 Our Mission
               </h2>
+              <div className="mb-6">
+                <AccentBar color="green" size="md" />
+              </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-...
+                  Placeholder
               </div>
             </div>
 
             <Card className="bg-card border-border p-8">
-              <h3 className="text-2xl font-normal text-foreground mb-6">What We Offer</h3>
+              <h3 className="text-2xl font-normal text-foreground mb-4">What We Offer</h3>
+              <div className="mb-6">
+                <AccentBar color="blue" size="sm" />
+              </div>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></div>
@@ -62,9 +73,15 @@ const About = () => {
             </Card>
           </div>
 
+          {/* Photo Slideshow */}
+          <AboutSlideshow />
+
           {/* Our 5 Pillars */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-16">Our 5 Pillars</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-4">Our 5 Pillars</h2>
+            <div className="flex justify-center mb-16">
+              <AccentBar color="blue" size="lg" />
+            </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { lazy, Suspense } from "react";
+import { AccentBar } from "@/components/AccentBar";
 
 // Lazy load the heavy ASCIIText component with Three.js
 const ASCIIText = lazy(() => import("./ASCIIText"));
@@ -52,6 +53,10 @@ export const HeroSection = () => {
           <br />
           <span className="text-muted-foreground">at Virginia Tech</span>
         </h1>
+        
+        <div className="flex justify-center mb-8">
+          <AccentBar color="blue" size="lg" />
+        </div>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed font-light">
           Kappa Theta Pi fosters a community of students passionate

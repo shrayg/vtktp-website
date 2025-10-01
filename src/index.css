@@ -6,6 +6,53 @@
 
 @layer base {
   :root {
+    /* Light mode (default) - clean white background */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 0%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 85%;
+    --input: 0 0% 92%;
+    --ring: 0 0% 0%;
+
+    --radius: 0.125rem;
+
+    /* Light mode specific colors */
+    --vars-accent: 0 0% 0%;
+
+    /* Gradients - clean white to light gray */
+    --gradient-hero: radial-gradient(ellipse at center, hsl(0 0% 98%) 0%, hsl(0 0% 100%) 100%);
+
+    /* Grid pattern - very subtle for light mode */
+    --grid-color: hsl(0 0% 92%);
+
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark mode */
+  .dark {
     /* True vars.gg colors - pure black background */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
@@ -35,8 +82,6 @@
     --input: 0 0% 8%;
     --ring: 0 0% 100%;
 
-    --radius: 0.125rem;
-
     /* Vars specific colors */
     --vars-accent: 0 0% 100%;
 
@@ -45,41 +90,6 @@
 
     /* Grid pattern - very subtle */
     --grid-color: hsl(0 0% 8%);
-
-    /* Animations */
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Light mode */
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 0%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
-    
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
-    
-    --accent: 0 0% 0%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 85%;
-    --input: 0 0% 92%;
-    --ring: 0 0% 0%;
   }
 }
 

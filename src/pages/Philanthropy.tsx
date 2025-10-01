@@ -1,8 +1,29 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
-import { Heart, Globe, Users, TreePine } from "lucide-react";
+import { Heart, Globe, Users, TreePine, Check } from "lucide-react";
+import { AccentBar } from "@/components/AccentBar";
+import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Philanthropy = () => {
+  const { toast } = useToast();
+  const [showCheck, setShowCheck] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("ktp@vt.edu");
+      setShowCheck(true);
+      toast({
+        description: "Copied",
+        duration: 2000,
+      });
+      setTimeout(() => setShowCheck(false), 1000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -14,6 +35,9 @@ const Philanthropy = () => {
             <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
               Philanthropy & Service
             </h1>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="lg" />
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Giving back to our community through technology and service. We believe in using 
               our skills and passion to make a positive impact.
@@ -23,16 +47,16 @@ const Philanthropy = () => {
           {/* Impact Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
-              <div className="text-3xl font-bold text-foreground mb-2">50+</div>
-              <div className="text-muted-foreground">Hours of Community Service</div>
+              <div className="text-3xl font-bold text-foreground mb-2">#</div>
+              <div className="text-muted-foreground">Placeholder</div>
             </Card>
             <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
-              <div className="text-3xl font-bold text-foreground mb-2">10+</div>
-              <div className="text-muted-foreground">Community Partners</div>
+              <div className="text-3xl font-bold text-foreground mb-2">#</div>
+              <div className="text-muted-foreground">Placeholder</div>
             </Card>
             <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
-              <div className="text-3xl font-bold text-foreground mb-2">$2,000+</div>
-              <div className="text-muted-foreground">Raised for Local Charities</div>
+              <div className="text-3xl font-bold text-foreground mb-2">#</div>
+              <div className="text-muted-foreground">Placeholder</div>
             </Card>
           </div>
 
@@ -46,6 +70,8 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Tech for Good</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
+                Placeholder... <br/>
+
                 We leverage our technical skills to help local nonprofits and community organizations. 
                 From building websites to developing mobile apps, we use technology to amplify the 
                 impact of those doing good work.
@@ -65,6 +91,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">STEM Education</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
+              Placeholder... <br/>
                 We're passionate about inspiring the next generation of technologists. Through 
                 partnerships with local schools, we provide hands-on STEM education and mentorship 
                 to students of all ages.
@@ -84,6 +111,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Environmental Impact</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
+              Placeholder... <br/>
                 Technology can be a powerful force for environmental conservation. We organize 
                 community clean-up events and develop apps to promote sustainable practices 
                 on campus and beyond.
@@ -103,6 +131,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Global Outreach</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
+              Placeholder... <br/>
                 Our impact extends beyond Blacksburg. We partner with international organizations 
                 to provide technology solutions for global challenges and support educational 
                 initiatives in underserved communities.
@@ -123,20 +152,18 @@ const Philanthropy = () => {
               in need of tech support, we'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:ktp@vt.edu" 
+              <button 
+                onClick={handleCopyEmail}
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-sm hover:bg-primary/90 transition-colors"
               >
-                Partner With Us
-              </a>
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                {showCheck ? <Check className="w-4 h-4" /> : "Email Us"}
+              </button>
+              <Link 
+                to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors"
               >
-                Join Our Mission
-              </a>
+                Contact Us
+              </Link>
             </div>
           </Card>
         </div>
