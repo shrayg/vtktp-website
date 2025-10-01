@@ -353,8 +353,8 @@ class CanvAscii {
     this.container.appendChild(this.filter.domElement);
     this.setSize(this.width, this.height);
 
-    this.container.addEventListener('mousemove', this.onMouseMove);
-    this.container.addEventListener('touchmove', this.onMouseMove);
+    document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('touchmove', this.onMouseMove);
   }
 
   setSize(w: number, h: number) {
@@ -375,9 +375,13 @@ class CanvAscii {
 
   onMouseMove(evt: MouseEvent | TouchEvent) {
     const e = 'touches' in evt ? evt.touches[0] : evt;
+    // Use viewport coordinates relative to container center
     const bounds = this.container.getBoundingClientRect();
-    const x = e.clientX - bounds.left;
-    const y = e.clientY - bounds.top;
+    const containerCenterX = bounds.left + bounds.width / 2;
+    const containerCenterY = bounds.top + bounds.height / 2;
+    // Map mouse position relative to container center
+    const x = (e.clientX - containerCenterX) + (bounds.width / 2);
+    const y = (e.clientY - containerCenterY) + (bounds.height / 2);
     this.mouse = { x, y };
   }
 
@@ -431,8 +435,8 @@ class CanvAscii {
     }
     this.filter.dispose();
     this.container.removeChild(this.filter.domElement);
-    this.container.removeEventListener('mousemove', this.onMouseMove);
-    this.container.removeEventListener('touchmove', this.onMouseMove);
+    document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('touchmove', this.onMouseMove);
     this.clear();
     this.renderer.dispose();
   }
