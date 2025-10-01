@@ -18,7 +18,7 @@ export const HeroSection = () => {
       />
 
       {/* ASCII Text Effect - Desktop Only (xl breakpoint excludes tablets) */}
-      <div className="hidden xl:flex relative w-full h-[600px] mb-4 ascii-container items-center justify-center">
+      <div className="hidden xl:flex relative w-full max-w-4xl mx-auto px-6 h-[600px] mb-4 ascii-container items-center justify-center">
         <ASCIIText 
           text="KTP"
           asciiFontSize={10}
