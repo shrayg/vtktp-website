@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ASCIIText from "./ASCIIText";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background">
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-background">
       {/* Subtle grid background - exactly like vars.gg */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03] light:opacity-[0.05]"
@@ -15,8 +16,20 @@ export const HeroSection = () => {
           backgroundSize: '60px 60px'
         }}
       />
+
+      {/* ASCII Text Effect - Desktop Only */}
+      <div className="hidden lg:block relative w-full h-[400px] mb-8">
+        <ASCIIText 
+          text="KTP"
+          asciiFontSize={8}
+          textFontSize={200}
+          textColor="#fdf9f3"
+          planeBaseHeight={8}
+          enableWaves={true}
+        />
+      </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-8">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal mb-8 text-foreground leading-[1.1] tracking-tight">
           The Premier Professional
           <br />
