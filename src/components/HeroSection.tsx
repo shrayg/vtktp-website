@@ -1,14 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { AccentBar } from "@/components/AccentBar";
 
 // Lazy load the heavy ASCIIText component with Three.js
 const ASCIIText = lazy(() => import("./ASCIIText"));
 
 export const HeroSection = () => {
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const calculateScale = () => {
+      // Use 1080p (1080px) as the baseline height
+      const baselineHeight = 1080;
+      const currentHeight = window.innerHeight;
+      const newScale = Math.min(currentHeight / baselineHeight, 1);
+      setScale(newScale);
+    };
+
+    // Calculate initial scale
+    calculateScale();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', calculateScale);
+    
+    return () => window.removeEventListener('resize', calculateScale);
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-background">
+    <section 
+      className="relative h-screen flex flex-col items-center justify-center bg-background"
+      style={{
+        transform: `scale(${scale})`,
+        transformOrigin: 'center center'
+      }}
+    >
       {/* Subtle grid background - exactly like vars.gg */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03] light:opacity-[0.05]"
@@ -22,7 +48,7 @@ export const HeroSection = () => {
       />
 
       {/* ASCII Text Effect - Desktop Only (xl breakpoint excludes tablets) */}
-      <div className="hidden xl:flex relative w-full max-w-4xl mx-auto px-6 h-[600px] mb-4 ascii-container items-center justify-center">
+      <div className="hidden xl:flex relative w-full max-w-4xl mx-auto px-6 h-[500px] mb-4 ascii-container items-center justify-center">
         <Suspense fallback={
           <div className="flex items-center justify-center h-full">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-foreground"></div>
@@ -30,10 +56,10 @@ export const HeroSection = () => {
         }>
           <ASCIIText 
             text="KTP"
-            asciiFontSize={10}
-            textFontSize={300}
+            asciiFontSize={8}
+            textFontSize={250}
             textColor="#fdf9f3"
-            planeBaseHeight={12}
+            planeBaseHeight={10}
             enableWaves={true}
           />
         </Suspense>
