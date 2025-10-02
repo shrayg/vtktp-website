@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Users, GraduationCap, Heart, Code, BookOpen } from "lucide-react";
 import { AboutSlideshow } from "@/components/AboutSlideshow";
 import { AccentBar } from "@/components/AccentBar";
+import LogoLoop from "@/components/LogoLoop";
+import { companyLogos } from "@/data/companyLogos";
 
 const About = () => {
   return (
@@ -75,6 +77,34 @@ const About = () => {
 
           {/* Photo Slideshow */}
           <AboutSlideshow />
+
+          {/* Company Partners */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-normal text-foreground mb-4">
+              Our Alumni Network
+            </h2>
+            <div className="flex justify-center mb-8">
+              <AccentBar color="blue" size="lg" />
+            </div>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+              Our brothers have gone on to work at some of the most innovative companies in technology, 
+              finance, and beyond. Here are just a few of the organizations where our alumni have made their mark.
+            </p>
+            <div style={{ height: '160px', position: 'relative', overflow: 'hidden' }}>
+              <LogoLoop
+                logos={companyLogos}
+                speed={80}
+                direction="left"
+                logoHeight={60}
+                gap={64}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="hsl(var(--background))"
+                ariaLabel="Alumni company partners"
+              />
+            </div>
+          </div>
 
           {/* Our 5 Pillars */}
           <div className="text-center mb-16">

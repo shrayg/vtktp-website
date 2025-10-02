@@ -109,8 +109,8 @@ const Contact = () => {
                 <div className="space-y-2 text-sm">
                   <p><strong className="text-foreground">Requirements:</strong></p>
                   <ul className="space-y-1 pl-4">
-                    <li>• Full-time Virginia Tech student</li>
-                    <li>• Minimum 2.5 GPA</li>
+                    <li>• Placeholder</li>
+                    <li>• Placeholder</li>
                     <li>• Passion for technology and innovation</li>
                     <li>• Commitment to professional development</li>
                   </ul>
@@ -145,9 +145,9 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground/70">Location shared with members</p>
                 </div>
                 <div>
-                  <p className="text-foreground font-medium mb-1">Office Hours</p>
-                  <p className="text-sm">By appointment</p>
-                  <p className="text-sm text-muted-foreground/70">Contact us to schedule</p>
+                  <p className="text-foreground font-medium mb-1">Placeholder</p>
+                  <p className="text-sm">Placeholder</p>
+                  <p className="text-sm text-muted-foreground/70">Placeholder</p>
                 </div>
               </div>
             </Card>

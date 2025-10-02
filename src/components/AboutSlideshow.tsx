@@ -4,45 +4,106 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AccentBar } from "@/components/AccentBar";
 
+// Import images from assets (all WebP format for optimal performance)
+import image1 from "@/assets/ktppictures/aboutme/0c258901-e420-4fc1-ade6-7a0b7b5caa8a.webp";
+import image2 from "@/assets/ktppictures/aboutme/1400fa08-98d4-4f6b-88fd-8d2d9d678b3b.webp";
+import image3 from "@/assets/ktppictures/aboutme/32e660b8-3cd3-4c26-8644-3dfd086fb895.webp";
+import image4 from "@/assets/ktppictures/aboutme/679a5d20-54ee-4dd4-9f2c-43d5dee1e5ea.webp";
+import image5 from "@/assets/ktppictures/aboutme/801fdd2e-1278-4bcd-858a-f2682e3c7d21.webp";
+import image6 from "@/assets/ktppictures/aboutme/db33629d-517f-4bbd-b735-8ebc054a21d0.webp";
+import image7 from "@/assets/ktppictures/aboutme/ff8d78d5-23d0-474d-a75e-9928de33dab0.webp";
+import groupPhoto from "@/assets/ktppictures/aboutme/group_photo.webp";
+
 // List of images from the aboutme folder
 const images = [
-  "/ktppictures/aboutme/0c258901-e420-4fc1-ade6-7a0b7b5caa8a.jpg",
-  "/ktppictures/aboutme/1400fa08-98d4-4f6b-88fd-8d2d9d678b3b.jpg",
-  "/ktppictures/aboutme/32e660b8-3cd3-4c26-8644-3dfd086fb895.jpg",
-  "/ktppictures/aboutme/679a5d20-54ee-4dd4-9f2c-43d5dee1e5ea.webp",
-  "/ktppictures/aboutme/801fdd2e-1278-4bcd-858a-f2682e3c7d21.jpg",
-  "/ktppictures/aboutme/db33629d-517f-4bbd-b735-8ebc054a21d0.jpg",
-  "/ktppictures/aboutme/ff8d78d5-23d0-474d-a75e-9928de33dab0.jpg",
-  "/ktppictures/aboutme/group_photo.jpg"
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  groupPhoto
 ];
 
 export const AboutSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [blurAmount, setBlurAmount] = useState(0);
+  const [isAutoAdvancePaused, setIsAutoAdvancePaused] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0])); // Track loaded images
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-advance slideshow every 3.2 seconds
+  // Auto-advance slideshow every 3.2 seconds (only when not paused)
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      transitionToNext();
-    }, 3200);
+    if (!isAutoAdvancePaused) {
+      intervalRef.current = setInterval(() => {
+        transitionToNext();
+      }, 3200);
+    }
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
     };
+  }, [isAutoAdvancePaused]);
+
+  // Function to pause auto-advance for 10 seconds
+  const pauseAutoAdvance = () => {
+    setIsAutoAdvancePaused(true);
+    
+    // Clear any existing pause timeout
+    if (pauseTimeoutRef.current) {
+      clearTimeout(pauseTimeoutRef.current);
+    }
+    
+    // Resume auto-advance after 10 seconds
+    pauseTimeoutRef.current = setTimeout(() => {
+      setIsAutoAdvancePaused(false);
+    }, 10000);
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+    };
   }, []);
+
+  // Preload images for better performance
+  useEffect(() => {
+    const preloadImage = (src: string, index: number) => {
+      const img = new Image();
+      img.onload = () => {
+        setLoadedImages(prev => new Set([...prev, index]));
+      };
+      img.src = src;
+    };
+
+    // Preload next 2 images
+    const nextIndex1 = (currentIndex + 1) % images.length;
+    const nextIndex2 = (currentIndex + 2) % images.length;
+    
+    if (!loadedImages.has(nextIndex1)) {
+      preloadImage(images[nextIndex1], nextIndex1);
+    }
+    if (!loadedImages.has(nextIndex2)) {
+      preloadImage(images[nextIndex2], nextIndex2);
+    }
+  }, [currentIndex, loadedImages]);
 
   const transitionToNext = () => {
     setIsTransitioning(true);
     setBlurAmount(0);
     
-    // Animate blur in
+    // Optimized blur animation with fewer steps
     const blurIn = setInterval(() => {
       setBlurAmount(prev => {
-        if (prev >= 20) {
+        if (prev >= 15) { // Reduced from 20 to 15
           clearInterval(blurIn);
           // Change image at peak blur
           setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -57,23 +118,23 @@ export const AboutSlideshow = () => {
               }
               return prev - 1;
             });
-          }, 16); // ~60fps
+          }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
           
-          return 20;
+          return 15;
         }
         return prev + 1;
       });
-    }, 16); // ~60fps
+    }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
   };
 
   const transitionToPrevious = () => {
     setIsTransitioning(true);
     setBlurAmount(0);
     
-    // Animate blur in
+    // Optimized blur animation with fewer steps
     const blurIn = setInterval(() => {
       setBlurAmount(prev => {
-        if (prev >= 20) {
+        if (prev >= 15) { // Reduced from 20 to 15
           clearInterval(blurIn);
           // Change image at peak blur
           setCurrentIndex((prevIndex) => 
@@ -90,13 +151,13 @@ export const AboutSlideshow = () => {
               }
               return prev - 1;
             });
-          }, 16); // ~60fps
+          }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
           
-          return 20;
+          return 15;
         }
         return prev + 1;
       });
-    }, 16); // ~60fps
+    }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
   };
 
   const transitionToSlide = (index: number) => {
@@ -105,10 +166,10 @@ export const AboutSlideshow = () => {
     setIsTransitioning(true);
     setBlurAmount(0);
     
-    // Animate blur in
+    // Optimized blur animation with fewer steps
     const blurIn = setInterval(() => {
       setBlurAmount(prev => {
-        if (prev >= 20) {
+        if (prev >= 15) { // Reduced from 20 to 15
           clearInterval(blurIn);
           // Change image at peak blur
           setCurrentIndex(index);
@@ -123,27 +184,30 @@ export const AboutSlideshow = () => {
               }
               return prev - 1;
             });
-          }, 16); // ~60fps
+          }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
           
-          return 20;
+          return 15;
         }
         return prev + 1;
       });
-    }, 16); // ~60fps
+    }, 20); // Reduced from 16ms to 20ms (50fps instead of 60fps)
   };
 
   const goToPrevious = () => {
     if (isTransitioning) return;
+    pauseAutoAdvance(); // Pause auto-advance for 10 seconds
     transitionToPrevious();
   };
 
   const goToNext = () => {
     if (isTransitioning) return;
+    pauseAutoAdvance(); // Pause auto-advance for 10 seconds
     transitionToNext();
   };
 
   const goToSlide = (index: number) => {
     if (isTransitioning) return;
+    pauseAutoAdvance(); // Pause auto-advance for 10 seconds
     transitionToSlide(index);
   };
 
@@ -166,15 +230,22 @@ export const AboutSlideshow = () => {
         <div className="relative">
           {/* Main Image Display */}
           <div className="relative h-96 md:h-[500px] overflow-hidden">
+            {!loadedImages.has(currentIndex) && (
+              <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+                <div className="text-muted-foreground">Loading...</div>
+              </div>
+            )}
             <img
               src={images[currentIndex]}
               alt={`KTP Activity ${currentIndex + 1}`}
               className="w-full h-full object-cover transition-all duration-300"
               style={{
                 filter: `blur(${blurAmount}px)`,
-                transform: `scale(${1 + blurAmount * 0.02})`
+                transform: `scale(${1 + blurAmount * 0.01})`, // Reduced scale effect
+                opacity: loadedImages.has(currentIndex) ? 1 : 0
               }}
-              loading="lazy"
+              loading="eager" // Changed from lazy to eager for current image
+              onLoad={() => setLoadedImages(prev => new Set([...prev, currentIndex]))}
             />
             
             {/* Transition overlay for enhanced blur effect */}
@@ -239,6 +310,7 @@ export const AboutSlideshow = () => {
                     alt={`Thumbnail ${index + 1}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </button>
               ))}

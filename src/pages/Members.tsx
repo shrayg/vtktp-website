@@ -2,22 +2,10 @@ import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, Code, Users } from "lucide-react";
-import placeholderMale from "@/assets/placeholder-male.png";
-import placeholderFemale from "@/assets/placeholder-female.png";
+import { getMemberImage, placeholderMale, placeholderFemale } from "@/data/memberImages";
 import { AccentBar } from "@/components/AccentBar";
 
 const Members = () => {
-  // Function to get member image based on last name
-  const getMemberImage = (name: string, gender: string, isEboard: boolean = false) => {
-    const lastName = name.split(' ').pop()?.toLowerCase();
-    if (!lastName) return gender === "female" ? placeholderFemale : placeholderMale;
-    
-    const folder = isEboard ? 'eboard' : 'chapter';
-    const imagePath = `/ktppictures/members/${folder}/${lastName}.jpg`;
-    
-    return imagePath;
-  };
-
   // Function to handle image load errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, gender: string) => {
     const target = e.target as HTMLImageElement;
