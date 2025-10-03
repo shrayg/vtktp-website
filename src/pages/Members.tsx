@@ -74,7 +74,7 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">#</div>
+              <div className="text-2xl font-bold text-foreground mb-1">55</div>
               <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
@@ -127,25 +127,21 @@ const Members = () => {
             </div>
           </div>
 
-          {/* Meet Our Chapter */}
+          {/* Alpha Class */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-4">Meet Our Chapter</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-4">Alpha Class</h2>
             <div className="flex justify-center mb-6">
               <AccentBar color="blue" size="md" />
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our chapter is made up of diverse, talented students from various backgrounds and majors, 
+              Our founding class of diverse, talented students from various backgrounds and majors, 
               all united by our passion for technology. From computer science to engineering, business to design, 
               our members bring unique perspectives and skills to our community.
             </p>
           </div>
 
-          {/* Chapter Members */}
+          {/* Alpha Class Members */}
           <div className="mb-16">
-            <h3 className="text-2xl font-normal text-foreground mb-4 text-center">Chapter Members</h3>
-            <div className="flex justify-center mb-8">
-              <AccentBar color="green" size="sm" />
-            </div>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
               {members.map((member, index) => (
                 <div key={index} className="text-center">
@@ -163,8 +159,68 @@ const Members = () => {
             </div>
           </div>
 
+          {/* Beta Class */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-normal text-foreground mb-4">Beta Class</h2>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="md" />
+            </div>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Our second class of dedicated students who continue to build upon our foundation. 
+              These members bring fresh energy and innovative ideas to our growing community.
+            </p>
+          </div>
+
+          {/* Beta Class Members */}
+          <div className="mb-16">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
+              {Array.from({ length: 12 }, (_, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
+                    <img 
+                      src={placeholderMale}
+                      alt={`Beta Member ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-foreground text-xs md:text-sm font-medium">Beta Member {index + 1}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Gamma Class */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-normal text-foreground mb-4">Gamma Class</h2>
+            <div className="flex justify-center mb-6">
+              <AccentBar color="blue" size="md" />
+            </div>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Our newest class of aspiring technologists ready to make their mark. 
+              These members represent the future of our organization and the next generation of leaders.
+            </p>
+          </div>
+
+          {/* Gamma Class Members */}
+          <div className="mb-16">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
+              {Array.from({ length: 8 }, (_, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
+                    <img 
+                      src={placeholderFemale}
+                      alt={`Gamma Member ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-foreground text-xs md:text-sm font-medium">Gamma Member {index + 1}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Join CTA */}
-          <Card className="bg-card border-border p-12 text-center transition-transform duration-200 hover:scale-105">
+          <Card className="bg-card border-border p-12 text-center">
             <h2 className="text-3xl font-normal text-foreground mb-4">Ready to Join Our Brotherhood?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               We welcome students from all majors who share our passion for technology and 
@@ -173,11 +229,11 @@ const Members = () => {
             </p>
             <Button 
               variant="outline" 
-              className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium px-8 py-3"
+              className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium px-8 py-3 transition-transform duration-200 hover:scale-105"
               asChild
             >
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
-                Apply for Fall 2025
+                Apply for Spring 2026
               </a>
             </Button>
           </Card>
