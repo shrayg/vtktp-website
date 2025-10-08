@@ -53,7 +53,7 @@ const Contact = () => {
               <p className="text-muted-foreground text-sm mb-4">Get in touch with our leadership team</p>
               <button 
                 onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-all cursor-pointer transition-transform duration-200 hover:scale-105"
               >
                 {showCheck ? <Check className="w-4 h-4" /> : "ktp@vt.edu"}
               </button>
@@ -69,7 +69,7 @@ const Contact = () => {
                 href="https://www.instagram.com/vtktp/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors transition-transform duration-200 hover:scale-105"
               >
                 @vtktp
               </a>
@@ -85,7 +85,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/company/kappa-theta-pi-virginia-tech/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors transition-transform duration-200 hover:scale-105"
               >
                 Follow Us
               </a>
@@ -117,7 +117,7 @@ const Contact = () => {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium w-full mt-4"
+                  className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium w-full mt-4 transition-transform duration-200 hover:scale-105"
                   asChild
                 >
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">

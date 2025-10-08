@@ -46,15 +46,15 @@ const Philanthropy = () => {
 
           {/* Impact Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8 text-center">
               <div className="text-3xl font-bold text-foreground mb-2">#</div>
               <div className="text-muted-foreground">Placeholder</div>
             </Card>
-            <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8 text-center">
               <div className="text-3xl font-bold text-foreground mb-2">#</div>
               <div className="text-muted-foreground">Placeholder</div>
             </Card>
-            <Card className="bg-card border-border p-8 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8 text-center">
               <div className="text-3xl font-bold text-foreground mb-2">#</div>
               <div className="text-muted-foreground">Placeholder</div>
             </Card>
@@ -62,7 +62,7 @@ const Philanthropy = () => {
 
           {/* Initiatives */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <Card className="bg-card border-border p-8 transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
                   <Heart className="w-6 h-6 text-foreground" />
@@ -83,7 +83,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-card border-border p-8 transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
                   <Users className="w-6 h-6 text-foreground" />
@@ -103,7 +103,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-card border-border p-8 transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
                   <TreePine className="w-6 h-6 text-foreground" />
@@ -123,7 +123,7 @@ const Philanthropy = () => {
               </ul>
             </Card>
 
-            <Card className="bg-card border-border p-8 transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
                   <Globe className="w-6 h-6 text-foreground" />
@@ -154,13 +154,13 @@ const Philanthropy = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-sm hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-sm hover:bg-primary/90 transition-colors transition-transform duration-200 hover:scale-105"
               >
                 {showCheck ? <Check className="w-4 h-4" /> : "Email Us"}
               </button>
               <Link 
                 to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors transition-transform duration-200 hover:scale-105"
               >
                 Contact Us
               </Link>
