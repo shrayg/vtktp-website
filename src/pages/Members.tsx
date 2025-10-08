@@ -63,8 +63,8 @@ const Members = () => {
               <AccentBar color="blue" size="lg" />
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Meet the diverse group of students who make up KTP's Alpha Gamma chapter. 
-              From computer science to business, our members bring unique perspectives to technology.
+              Meet the diverse group of students who make up KTP's members. 
+              With over fifteen different majors in the fraternity, our members bring unique perspectives to technology.
             </p>
           </div>
 
