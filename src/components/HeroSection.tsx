@@ -92,11 +92,11 @@ export const HeroSection = () => {
 
         <Button 
           variant="outline" 
-          className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium px-6 py-3 text-base"
+          className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium px-6 py-3 text-base transition-transform duration-200 hover:scale-105"
           asChild
         >
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
-            Fall 2025 Interest Form
+            Spring 2026 Interest Form
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </Button>

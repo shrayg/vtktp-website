@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Briefcase, Code, Users } from "lucide-react";
+import { GraduationCap, Briefcase, Code, Users, Globe } from "lucide-react";
 import { getMemberImage, placeholderMale, placeholderFemale } from "@/data/memberImages";
 import { AccentBar } from "@/components/AccentBar";
 
@@ -14,77 +14,80 @@ const Members = () => {
 
   const eBoard = [
     { name: "Jasmine Varma", role: "President", gender: "female" },
-    { name: "Kamryn McKinney", role: "VP Internal Affairs", gender: "female" },
-    { name: "Ghazal Tanavade", role: "VP External Affairs", gender: "female" },
     { name: "Riaz Ahsan", role: "VP Professional & Technical Development", gender: "male" },
-    { name: "Julia Suchkova", role: "VP Marketing", gender: "female" },
     { name: "Nazila Abyaneh", role: "VP Finance", gender: "female" },
     { name: "Morgan Bradley", role: "VP Philanthropy", gender: "female" },
-    { name: "Matt Hausler", role: "VP Social Engagement", gender: "male" },
     { name: "Lily Cole", role: "VP Membership", gender: "female" },
+    { name: "Matt Hausler", role: "VP Social Engagement", gender: "male" },
+    { name: "Kamryn McKinney", role: "VP Internal Affairs", gender: "female" },
     { name: "Hunter Robbins", role: "Director of New Member Recruits", gender: "male" },
+    { name: "Julia Suchkova", role: "VP Marketing", gender: "female" },
+    { name: "Ghazal Tanavade", role: "VP External Affairs", gender: "female" },
     { name: "Annie Malamphy", role: "VP Marketing", gender: "female" },
-
   ];
 
   // Alpha Class members
   const alphaClass = [
-    { name: "Mallory Shumway", gender: "female" },
-    { name: "Sophia Gwaltney", gender: "female" },
-    { name: "Brianna McDonald", gender: "female" },
-    { name: "Justin Burns", gender: "male" },
-    { name: "Noor Naim", gender: "female" },
-    { name: "Hanru Li", gender: "male" },
-    { name: "Divyasimha Talreja", gender: "female" },
     { name: "Gianni Ager", gender: "male" },
-    { name: "Hailey Pazmino", gender: "female" },
+    { name: "Justin Burns", gender: "male" },
+    { name: "Sophia Gwaltney", gender: "female" },
+    { name: "Hanru Li", gender: "male" },
     { name: "Austen Liles", gender: "male" },
+    { name: "Brianna McDonald", gender: "female" },
+    { name: "Noor Naim", gender: "female" },
+    { name: "Hailey Pazmino", gender: "female" },
+    { name: "Mallory Shumway", gender: "female" },
     { name: "Ben Sullivan", gender: "male" },
+    { name: "Divyasimha Talreja", gender: "female" },
     { name: "Franklin Zhang", gender: "male" },
   ];
 
   // Beta Class members
   const betaClass = [
-    { name: "Lily Ehler", gender: "female" },
-    { name: "Antara Rajgopal", gender: "female" },
+    { name: "Layla Abreu", gender: "female" },
     { name: "Morgan Bradley", gender: "female" },
-    { name: "Peter MacPhail", gender: "male" },
+    { name: "Aashi Dugar", gender: "female" },
+    { name: "Lily Ehler", gender: "female" },
     { name: "Dominic Kretzing", gender: "male" },
     { name: "Michael Duarte", gender: "male" },
-    { name: "Mitchell Vikhman", gender: "male" },
-    { name: "Ashwin Tripathy", gender: "male" },
-    { name: "Layla Abreu", gender: "female" },
+    { name: "Peter MacPhail", gender: "male" },
     { name: "Sree Mamilla", gender: "female" },
-    { name: "Aashi Dugar", gender: "female" },
     { name: "Ramya Radhakrishnan", gender: "female" },
+    { name: "Antara Rajgopal", gender: "female" },
+    { name: "Ashwin Tripathy", gender: "male" },
+    { name: "Mitchell Vikhman", gender: "male" },
   ];
 
   // Gamma Class members
   const gammaClass = [
     { name: "Yousif Abuhaija", gender: "male" },
-    { name: "Nick Teal", gender: "male" },
+    { name: "Karla Andujar", gender: "female" },
+    { name: "Sean Breslin", gender: "male" },
+    { name: "Luke Brugger", gender: "male" },
+    { name: "Jaylene Chute", gender: "female" },
+    { name: "Ryan Gow", gender: "male" },
+    { name: "Shray Gupta", gender: "male" },
     { name: "Charlie Hui", gender: "male" },
-    { name: "Hamza Rafat", gender: "male" },
-    { name: "Joshua Ponnraj", gender: "male" },
     { name: "Keegan Hoyne", gender: "male" },
     { name: "Samir Khattak", gender: "male" },
     { name: "Tim Pactwa", gender: "male" },
-    { name: "Shray Gupta", gender: "male" },
-    { name: "Charu Vijay", gender: "female" },
-    { name: "Jaylene Chute", gender: "female" },
-    { name: "Luke Brugger", gender: "male" },
+    { name: "Joshua Ponnraj", gender: "male" },
     { name: "Akanksha Potluri", gender: "female" },
-    { name: "Sean Breslin", gender: "male" },
-    { name: "Karla Andujar", gender: "female" },
-    { name: "Ryan Gow", gender: "male" },
+    { name: "Hamza Rafat", gender: "male" },
+    { name: "Nick Teal", gender: "male" },
+    { name: "Charu Vijay", gender: "female" },
   ];
 
-  // Combine all classes and sort alphabetically by name
+  // Combine all classes and sort alphabetically by last name
   const allMembers = [
     ...alphaClass.map(member => ({ ...member, class: "Alpha Class" })),
     ...betaClass.map(member => ({ ...member, class: "Beta Class" })),
     ...gammaClass.map(member => ({ ...member, class: "Gamma Class" }))
-  ].sort((a, b) => a.name.localeCompare(b.name));
+  ].sort((a, b) => {
+    const aLastName = a.name.split(' ').pop() || '';
+    const bLastName = b.name.split(' ').pop() || '';
+    return aLastName.localeCompare(bLastName);
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -121,16 +124,16 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">#</div>
+              <div className="text-2xl font-bold text-foreground mb-1">15+</div>
               <div className="text-muted-foreground text-sm">Different Majors</div>
             </Card>
 
             <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="w-6 h-6 text-foreground" />
+                <Globe className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">#</div>
-              <div className="text-muted-foreground text-sm">Job Placement Rate</div>
+              <div className="text-2xl font-bold text-foreground mb-1">30+</div>
+              <div className="text-muted-foreground text-sm">National Chapters</div>
             </Card>
 
             <Card className="bg-card border-border p-6 text-center ">
@@ -170,13 +173,8 @@ const Members = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-normal text-foreground mb-4">Meet the Brothers</h2>
             <div className="flex justify-center mb-6">
-              <AccentBar color="blue" size="md" />
+              <AccentBar color="green" size="md" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our chapter is made up of diverse, talented students from various backgrounds and majors, 
-              all united by our passion for technology. From computer science to engineering, business to design, 
-              our members bring unique perspectives and skills to our community.
-            </p>
           </div>
 
           {/* All Brothers */}
