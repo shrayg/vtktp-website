@@ -74,7 +74,7 @@ const Members = () => {
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">#</div>
+              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
               <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
