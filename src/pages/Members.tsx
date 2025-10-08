@@ -23,30 +23,68 @@ const Members = () => {
     { name: "Matt Hausler", role: "VP Social Engagement", gender: "male" },
     { name: "Lily Cole", role: "VP Membership", gender: "female" },
     { name: "Hunter Robbins", role: "Director of New Member Recruits", gender: "male" },
+    { name: "Annie Malamphy", role: "VP Marketing", gender: "female" },
+
   ];
 
-  const members = [
-    { name: "Layla Abreu", gender: "female" },
-    { name: "Gianni Ager", gender: "male" },
-    { name: "Asma Adiba", gender: "female" },
-    { name: "Alayit Berhanu", gender: "female" },
-    { name: "Justin Burns", gender: "male" },
-    { name: "Michael Duarte", gender: "male" },
-    { name: "Aashi Dugar", gender: "female" },
-    { name: "Lily Ehler", gender: "female" },
-    { name: "Elroi Elias", gender: "male" },
+  // Alpha Class members
+  const alphaClass = [
+    { name: "Mallory Shumway", gender: "female" },
     { name: "Sophia Gwaltney", gender: "female" },
-    { name: "Dominic Kretzing", gender: "male" },
-    { name: "Hanru Li", gender: "male" },
-    { name: "Peter MacPhail", gender: "male" },
     { name: "Brianna McDonald", gender: "female" },
-    { name: "Ramya Radhakrishnan", gender: "female" },
-    { name: "Antara Rajgopal", gender: "female" },
-    { name: "Benjamin Sullivan", gender: "male" },
-    { name: "Simha Talreja", gender: "female" },
-    { name: "Ashwin Tripathy", gender: "male" },
-    { name: "Mitchell Vikhman", gender: "male" },
+    { name: "Justin Burns", gender: "male" },
+    { name: "Noor Naim", gender: "female" },
+    { name: "Hanru Li", gender: "male" },
+    { name: "Divyasimha Talreja", gender: "female" },
+    { name: "Gianni Ager", gender: "male" },
+    { name: "Hailey Pazmino", gender: "female" },
+    { name: "Austen Liles", gender: "male" },
+    { name: "Ben Sullivan", gender: "male" },
+    { name: "Franklin Zhang", gender: "male" },
   ];
+
+  // Beta Class members
+  const betaClass = [
+    { name: "Lily Ehler", gender: "female" },
+    { name: "Antara Rajgopal", gender: "female" },
+    { name: "Morgan Bradley", gender: "female" },
+    { name: "Peter MacPhail", gender: "male" },
+    { name: "Dominic Kretzing", gender: "male" },
+    { name: "Michael Duarte", gender: "male" },
+    { name: "Mitchell Vikhman", gender: "male" },
+    { name: "Ashwin Tripathy", gender: "male" },
+    { name: "Layla Abreu", gender: "female" },
+    { name: "Sree Mamilla", gender: "female" },
+    { name: "Aashi Dugar", gender: "female" },
+    { name: "Ramya Radhakrishnan", gender: "female" },
+  ];
+
+  // Gamma Class members
+  const gammaClass = [
+    { name: "Yousif Abuhaija", gender: "male" },
+    { name: "Nick Teal", gender: "male" },
+    { name: "Charlie Hui", gender: "male" },
+    { name: "Hamza Rafat", gender: "male" },
+    { name: "Joshua Ponnraj", gender: "male" },
+    { name: "Keegan Hoyne", gender: "male" },
+    { name: "Samir Khattak", gender: "male" },
+    { name: "Tim Pactwa", gender: "male" },
+    { name: "Shray Gupta", gender: "male" },
+    { name: "Charu Vijay", gender: "female" },
+    { name: "Jaylene Chute", gender: "female" },
+    { name: "Luke Brugger", gender: "male" },
+    { name: "Akanksha Potluri", gender: "female" },
+    { name: "Sean Breslin", gender: "male" },
+    { name: "Karla Andujar", gender: "female" },
+    { name: "Ryan Gow", gender: "male" },
+  ];
+
+  // Combine all classes and sort alphabetically by name
+  const allMembers = [
+    ...alphaClass.map(member => ({ ...member, class: "Alpha Class" })),
+    ...betaClass.map(member => ({ ...member, class: "Beta Class" })),
+    ...gammaClass.map(member => ({ ...member, class: "Gamma Class" }))
+  ].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen bg-background">
@@ -70,19 +108,16 @@ const Members = () => {
 
           {/* Member Statistics */}
           <div className="grid md:grid-cols-4 gap-6 mb-20">
-            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-foreground" />
               </div>
-<<<<<<< HEAD
+
               <div className="text-2xl font-bold text-foreground mb-1">50+</div>
-=======
-              <div className="text-2xl font-bold text-foreground mb-1">55</div>
->>>>>>> fd592db40feb704a752692a415dab721923146c0
               <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
-            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-6 h-6 text-foreground" />
               </div>
@@ -90,7 +125,7 @@ const Members = () => {
               <div className="text-muted-foreground text-sm">Different Majors</div>
             </Card>
 
-            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-6 h-6 text-foreground" />
               </div>
@@ -98,7 +133,7 @@ const Members = () => {
               <div className="text-muted-foreground text-sm">Job Placement Rate</div>
             </Card>
 
-            <Card className="bg-card border-border p-6 text-center transition-transform duration-200 hover:scale-105">
+            <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
                 <Code className="w-6 h-6 text-foreground" />
               </div>
@@ -131,24 +166,24 @@ const Members = () => {
             </div>
           </div>
 
-          {/* Alpha Class */}
+          {/* Meet the Brothers */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-4">Alpha Class</h2>
+            <h2 className="text-3xl font-normal text-foreground mb-4">Meet the Brothers</h2>
             <div className="flex justify-center mb-6">
               <AccentBar color="blue" size="md" />
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our founding class of diverse, talented students from various backgrounds and majors, 
+              Our chapter is made up of diverse, talented students from various backgrounds and majors, 
               all united by our passion for technology. From computer science to engineering, business to design, 
               our members bring unique perspectives and skills to our community.
             </p>
           </div>
 
-          {/* Alpha Class Members */}
+          {/* All Brothers */}
           <div className="mb-16">
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-              {members.map((member, index) => (
-                <div key={index} className="text-center">
+              {allMembers.map((member, index) => (
+                <div key={`member-${index}`} className="text-center">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
                     <img 
                       src={getMemberImage(member.name, member.gender, false)}
@@ -158,66 +193,7 @@ const Members = () => {
                     />
                   </div>
                   <h4 className="text-foreground text-xs md:text-sm font-medium">{member.name}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Beta Class */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-4">Beta Class</h2>
-            <div className="flex justify-center mb-6">
-              <AccentBar color="blue" size="md" />
-            </div>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our second class of dedicated students who continue to build upon our foundation. 
-              These members bring fresh energy and innovative ideas to our growing community.
-            </p>
-          </div>
-
-          {/* Beta Class Members */}
-          <div className="mb-16">
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-              {Array.from({ length: 12 }, (_, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
-                    <img 
-                      src={placeholderMale}
-                      alt={`Beta Member ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-foreground text-xs md:text-sm font-medium">Beta Member {index + 1}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Gamma Class */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-normal text-foreground mb-4">Gamma Class</h2>
-            <div className="flex justify-center mb-6">
-              <AccentBar color="blue" size="md" />
-            </div>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our newest class of aspiring technologists ready to make their mark. 
-              These members represent the future of our organization and the next generation of leaders.
-            </p>
-          </div>
-
-          {/* Gamma Class Members */}
-          <div className="mb-16">
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
-              {Array.from({ length: 8 }, (_, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
-                    <img 
-                      src={placeholderFemale}
-                      alt={`Gamma Member ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-foreground text-xs md:text-sm font-medium">Gamma Member {index + 1}</h4>
+                  <p className="text-muted-foreground text-xs">{member.class}</p>
                 </div>
               ))}
             </div>
