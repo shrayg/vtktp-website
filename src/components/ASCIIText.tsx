@@ -443,7 +443,7 @@ class CanvAscii {
 }
 
 export default function ASCIIText({
-  text = 'KTP',
+  text = 'KΘΠ', 
   asciiFontSize = 8,
   textFontSize = 200,
   textColor = '#fdf9f3',
