@@ -1,4 +1,4 @@
-# VT KTP Website
+# Virginia Tech KTP Website
 
 Official website for Virginia Tech's Kappa Theta Pi (KTP) chapter - a co-ed professional technology fraternity.
 
