@@ -110,5 +110,3 @@ npm run build
 This project is maintained by Virginia Tech Kappa Theta Pi.
 
 ---
-
-**Built with ❤️ by VT KTP**
