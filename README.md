@@ -67,27 +67,35 @@ Ensure you have installed:
 
 ## Deployment
 
-This project is configured for deployment on **Netlify**.
+This project is deployed on **Vercel**.
 
-### Netlify Configuration
+### Vercel Configuration
 
-The site is configured via `netlify.toml`:
+The default project settings already work for Vite apps:
 - **Build command:** `npm run build`
-- **Publish directory:** `dist`
-- **Redirects:** All routes redirect to `index.html` for SPA routing
+- **Install command:** `npm install`
+- **Output directory:** `dist`
+- **Framework preset:** Vite (auto-detected)
 
-### Deploy to Netlify
+For client-side routing, add a rewrite in **Project Settings → Routing**:
+```
+Source:  /<*>
+Destination: /index.html
+```
 
-1. **Connect your repository** to Netlify
-2. **Ensure the Next.js plugin is removed** (this is a Vite app, not Next.js)
-3. **Deploy settings are auto-configured** via `netlify.toml`
-4. **Push to main branch** to trigger automatic deployment
+### Deploy to Vercel
+
+1. **Import the repository** in the Vercel dashboard.
+2. Confirm the detected settings (build command/output directory).
+3. (Optional) Add environment variables under Project Settings → Environment Variables.
+4. Click **Deploy**.
+5. After the build succeeds, add your custom domain (e.g., `ktpvt.com`) and point DNS to Vercel (`76.76.21.21` for apex, CNAME for `www`).
 
 ### Manual Deployment
 
 ```bash
 npm run build
-# Upload the dist/ directory to your hosting provider
+# Serve the dist/ directory with any static host or CDN
 ```
 
 ## For Contributing
