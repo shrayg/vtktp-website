@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Briefcase, Code, Users, Globe } from "lucide-react";
+import { GraduationCap, Briefcase, Code, Users, Globe, CalendarDays } from "lucide-react";
 import { getMemberImage, placeholderMale, placeholderFemale } from "@/data/memberImages";
 import { AccentBar } from "@/components/AccentBar";
 
@@ -138,10 +138,10 @@ const Members = () => {
 
             <Card className="bg-card border-border p-6 text-center ">
               <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center mx-auto mb-4">
-                <Code className="w-6 h-6 text-foreground" />
+                <CalendarDays className="w-6 h-6 text-foreground" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">#</div>
-              <div className="text-muted-foreground text-sm">Placeholder</div>
+              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
+              <div className="text-muted-foreground text-sm">Annual Events</div>
             </Card>
           </div>
 
