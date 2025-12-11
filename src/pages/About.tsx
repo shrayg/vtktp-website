@@ -37,7 +37,12 @@ const About = () => {
                 <AccentBar color="green" size="md" />
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  Placeholder
+                  Our mission at Kappa Theta Pi is to develop the next generation of innovative 
+                  leaders and community members. Though various professional development workshops, 
+                  technical learning opportunities, and team-based projects, we help our members build the 
+                  necessary skills and confidence needed to thrive in the technology industry. We foster a 
+                  supportive brotherhood grounded in our five pillars, preparing each member to succeed 
+                  both here at Virginia Tech and beyond in the workplace.
               </div>
             </div>
 
