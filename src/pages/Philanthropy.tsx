@@ -70,7 +70,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Tech for Good</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Placeholder... <br/>
+                <br/>
 
                 We leverage our technical skills to help local nonprofits and community organizations. 
                 From building websites to developing mobile apps, we use technology to amplify the 
@@ -91,7 +91,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">STEM Education</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-              Placeholder... <br/>
+              <br></br>
                 We're passionate about inspiring the next generation of technologists. Through 
                 partnerships with local schools, we provide hands-on STEM education and mentorship 
                 to students of all ages.
@@ -111,7 +111,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Environmental Impact</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-              Placeholder... <br/>
+              <br/>
                 Technology can be a powerful force for environmental conservation. We organize 
                 community clean-up events and develop apps to promote sustainable practices 
                 on campus and beyond.
@@ -131,7 +131,7 @@ const Philanthropy = () => {
                 <h3 className="text-2xl font-normal text-foreground">Global Outreach</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-              Placeholder... <br/>
+              <br/>
                 Our impact extends beyond Blacksburg. We partner with international organizations 
                 to provide technology solutions for global challenges and support educational 
                 initiatives in underserved communities.
