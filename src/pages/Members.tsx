@@ -15,16 +15,17 @@ const Members = () => {
 
   const eBoard = [
     { name: "Jasmine Varma", role: "President", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jasminevarma/" },
-    { name: "Riaz Ahsan", role: "VP Professional & Technical Development", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/riazoahsan/" },
+    { name: "Morgan Bradley", role: "Co-President", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
+    { name: "Kamryn McKinney", role: "VP External", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
     { name: "Nazila Abyaneh", role: "VP Finance", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/nazila-abyaneh-57a723330/" },
-    { name: "Morgan Bradley", role: "VP Philanthropy", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
-    { name: "Lily Cole", role: "VP Membership", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lily-cole4/" },
-    { name: "Matt Hausler", role: "VP Social Engagement", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/matt-hausler-a03611296/" },
-    { name: "Kamryn McKinney", role: "VP Internal Affairs", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
-    { name: "Hunter Robbins", role: "Director of New Member Recruits", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hunter-robbins-meche/" },
-    { name: "Julia Suchkova", role: "VP Marketing", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
-    { name: "Ghazal Tanavade", role: "VP External Affairs", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ghazal-tanavade/" },
-    { name: "Annie Malamphy", role: "VP Marketing", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/annie-malamphy-86b411328/" },
+    { name: "Ghazal Tanavade", role: "VP Internal Operations", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ghazal-tanavade/" },
+    { name: "Ramya Radhakrishnan", role: "VP Professional Development", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ramya-radhakrishnan1/" },
+    { name: "Dominic Kretzing", role: "VP Membership", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/dominickretzing/" },
+    { name: "Brianna McDonald", role: "VP Marketing", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/brianna-mcdonald-b98096299/" },
+    { name: "Sree Mamilla", role: "VP Social Engagement", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/sreeyuktha-mamilla-59b32324a/" },
+    { name: "Mitchell Vikhman", role: "VP New Member Recruitment", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mitchellvikhman/" },
+    { name: "Shray Gupta", role: "VP Technical Advancement", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/shraygupta06/" },
+    { name: "Layla Abreu", role: "VP Philanthropy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/layla-abreu-6914b4278/" },
   ];
 
   // Alpha Class members
@@ -34,7 +35,6 @@ const Members = () => {
     { name: "Sophia Gwaltney", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/sophia-gwaltney-a065b2201/" },
     { name: "Hanru Li", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hanru-li-ba9012269/" },
     { name: "Austen Liles", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/austenliles/" },
-    { name: "Brianna McDonald", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/brianna-mcdonald-b98096299/" },
     { name: "Noor Naim", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/noor-naim-99850a352/" },
     { name: "Hailey Pazmino", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hailey-pazmino-75a3b828b/" },
     { name: "Mallory Shumway", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mallory-shumway/" },
@@ -45,18 +45,13 @@ const Members = () => {
 
   // Beta Class members
   const betaClass = [
-    { name: "Layla Abreu", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/layla-abreu-6914b4278/" },
     { name: "Morgan Bradley", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
     { name: "Aashi Dugar", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/aashi-dugar-371255327/" },
     { name: "Lily Ehler", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lmehler/" },
-    { name: "Dominic Kretzing", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/dominickretzing/" },
     { name: "Michael Duarte", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mduarte04/" },
     { name: "Peter MacPhail", gender: "male", gradYear: "2028", linkedin: "" },
-    { name: "Sree Mamilla", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/sreeyuktha-mamilla-59b32324a/" },
-    { name: "Ramya Radhakrishnan", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ramya-radhakrishnan1/" },
     { name: "Antara Rajgopal", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/antara-rajgopal/" },
     { name: "Ashwin Tripathy", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ashwin-tripathy/" },
-    { name: "Mitchell Vikhman", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mitchellvikhman/" },
   ];
 
   // Gamma Class members
@@ -67,7 +62,6 @@ const Members = () => {
     { name: "Luke Brugger", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/luke-brugger/" },
     { name: "Jaylene Chute", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jaylene-chute-4ab95320b/" },
     { name: "Ryan Gow", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ryan-gow04/" },
-    { name: "Shray Gupta", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/shraygupta06/" },
     { name: "Charlie Hui", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/charleshui06/" },
     { name: "Keegan Hoyne", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/keeganhoyne/" },
     { name: "Samir Khattak", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/samir-khattak/" },
