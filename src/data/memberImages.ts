@@ -2,46 +2,46 @@
 import placeholderMale from "@/assets/placeholder-male.png";
 import placeholderFemale from "@/assets/placeholder-female.png";
 
-// E-board member images
-import abyaneh from "@/assets/ktppictures/members/eboard/abyaneh.jpg";
-import bradley from "@/assets/ktppictures/members/eboard/bradley.jpg";
-import mckinney from "@/assets/ktppictures/members/eboard/mckinney.jpg";
-import tanavade from "@/assets/ktppictures/members/eboard/tanavade.jpg";
-// E-board members using chapter photos
-import abreu from "@/assets/ktppictures/members/chapter/abreu.jpg";
-import kretzing from "@/assets/ktppictures/members/chapter/kretzing.jpg";
-import mcdonald from "@/assets/ktppictures/members/chapter/mcdonald.jpg";
-import radhakrishnan from "@/assets/ktppictures/members/chapter/radhakrishnan.jpg";
-import vikhman from "@/assets/ktppictures/members/chapter/vikhman.jpg";
-import gupta from "@/assets/ktppictures/members/chapter/gupta.jpg";
-
-// Chapter member images
-import abuhaija from "@/assets/ktppictures/members/chapter/abuhaija.jpg";
-import ager from "@/assets/ktppictures/members/chapter/ager.jpg";
-import andujar from "@/assets/ktppictures/members/chapter/andujar.jpg";
-import asma from "@/assets/ktppictures/members/chapter/asma.jpg";
-import berhanu from "@/assets/ktppictures/members/chapter/berhanu.jpg";
-import brugger from "@/assets/ktppictures/members/chapter/brugger.jpg";
-import burns from "@/assets/ktppictures/members/chapter/burns.jpg";
-import duarte from "@/assets/ktppictures/members/chapter/duarte.jpg";
-import dugar from "@/assets/ktppictures/members/chapter/dugar.jpg";
-import ehler from "@/assets/ktppictures/members/chapter/ehler.jpg";
-import elias from "@/assets/ktppictures/members/chapter/elias.jpg";
-import gwaltney from "@/assets/ktppictures/members/chapter/gwaltney.jpg";
-import hoyne from "@/assets/ktppictures/members/chapter/hoyne.jpg";
-import hui from "@/assets/ktppictures/members/chapter/hui.jpg";
-import khattak from "@/assets/ktppictures/members/chapter/khattak.jpg";
-import li from "@/assets/ktppictures/members/chapter/li.jpg";
-import macphail from "@/assets/ktppictures/members/chapter/macphail.jpg";
-import pactwa from "@/assets/ktppictures/members/chapter/pactwa.jpg";
-import ponnraj from "@/assets/ktppictures/members/chapter/ponnraj.jpg";
-import rafat from "@/assets/ktppictures/members/chapter/rafat.jpg";
-import rajgopal from "@/assets/ktppictures/members/chapter/rajgopal.jpg";
-import sharma from "@/assets/ktppictures/members/chapter/sharma.jpg";
-import sullivan from "@/assets/ktppictures/members/chapter/sullivan.jpg";
-import talreja from "@/assets/ktppictures/members/chapter/talreja.jpg";
-import teal from "@/assets/ktppictures/members/chapter/teal.jpg";
-import tripathy from "@/assets/ktppictures/members/chapter/tripathy.jpg";
+// Member images
+import abreu from "@/assets/ktppictures/members/abreu.jpg";
+import abuhaija from "@/assets/ktppictures/members/abuhaija.jpg";
+import abyaneh from "@/assets/ktppictures/members/abyaneh.jpg";
+import ager from "@/assets/ktppictures/members/ager.jpg";
+import ahsan from "@/assets/ktppictures/members/ahsan.jpg";
+import andujar from "@/assets/ktppictures/members/andujar.jpg";
+import asma from "@/assets/ktppictures/members/asma.jpg";
+import berhanu from "@/assets/ktppictures/members/berhanu.jpg";
+import bradley from "@/assets/ktppictures/members/bradley.jpg";
+import brugger from "@/assets/ktppictures/members/brugger.jpg";
+import burns from "@/assets/ktppictures/members/burns.jpg";
+import duarte from "@/assets/ktppictures/members/duarte.jpg";
+import dugar from "@/assets/ktppictures/members/dugar.jpg";
+import ehler from "@/assets/ktppictures/members/ehler.jpg";
+import elias from "@/assets/ktppictures/members/elias.jpg";
+import gupta from "@/assets/ktppictures/members/gupta.jpg";
+import gwaltney from "@/assets/ktppictures/members/gwaltney.jpg";
+import hoyne from "@/assets/ktppictures/members/hoyne.jpg";
+import hui from "@/assets/ktppictures/members/hui.jpg";
+import khattak from "@/assets/ktppictures/members/khattak.jpg";
+import kretzing from "@/assets/ktppictures/members/kretzing.jpg";
+import li from "@/assets/ktppictures/members/li.jpg";
+import macphail from "@/assets/ktppictures/members/macphail.jpg";
+import mcdonald from "@/assets/ktppictures/members/mcdonald.jpg";
+import mckinney from "@/assets/ktppictures/members/mckinney.jpg";
+import pactwa from "@/assets/ktppictures/members/pactwa.jpg";
+import ponnraj from "@/assets/ktppictures/members/ponnraj.jpg";
+import radhakrishnan from "@/assets/ktppictures/members/radhakrishnan.jpg";
+import rafat from "@/assets/ktppictures/members/rafat.jpg";
+import rajgopal from "@/assets/ktppictures/members/rajgopal.jpg";
+import robbins from "@/assets/ktppictures/members/robbins.jpg";
+import sharma from "@/assets/ktppictures/members/sharma.jpg";
+import suchkova from "@/assets/ktppictures/members/suchkova.jpg";
+import sullivan from "@/assets/ktppictures/members/sullivan.jpg";
+import talreja from "@/assets/ktppictures/members/talreja.jpg";
+import tanavade from "@/assets/ktppictures/members/tanavade.jpg";
+import teal from "@/assets/ktppictures/members/teal.jpg";
+import tripathy from "@/assets/ktppictures/members/tripathy.jpg";
+import vikhman from "@/assets/ktppictures/members/vikhman.jpg";
 
 // E-board member image mapping
 const eboardImages: Record<string, string> = {
@@ -63,6 +63,7 @@ const chapterImages: Record<string, string> = {
   abreu,
   abuhaija,
   ager,
+  ahsan,
   andujar,
   asma,
   berhanu,
@@ -86,12 +87,15 @@ const chapterImages: Record<string, string> = {
   radhakrishnan,
   rafat,
   rajgopal,
+  robbins,
   sharma,
+  suchkova,
   sullivan,
   talreja,
   teal,
   tripathy,
   vikhman,
+  // Note: cole and hausler photos will fall back to placeholder if not found
 };
 
 // Function to get member image

@@ -38,20 +38,23 @@ const Members = () => {
     { name: "Noor Naim", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/noor-naim-99850a352/" },
     { name: "Hailey Pazmino", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hailey-pazmino-75a3b828b/" },
     { name: "Mallory Shumway", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mallory-shumway/" },
-    { name: "Ben Sullivan", gender: "male", gradYear: "2025", linkedin: "https://www.linkedin.com/in/benjamin-sullivan21/" },
     { name: "Divyasimha Talreja", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/divyasimha-talreja/" },
-    { name: "Franklin Zhang", gender: "male", gradYear: "", linkedin: "" },
   ];
 
   // Beta Class members
   const betaClass = [
-    { name: "Morgan Bradley", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
     { name: "Aashi Dugar", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/aashi-dugar-371255327/" },
     { name: "Lily Ehler", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lmehler/" },
     { name: "Michael Duarte", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mduarte04/" },
     { name: "Peter MacPhail", gender: "male", gradYear: "2028", linkedin: "" },
     { name: "Antara Rajgopal", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/antara-rajgopal/" },
     { name: "Ashwin Tripathy", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ashwin-tripathy/" },
+    { name: "Riaz Ahsan", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/riazoahsan/" },
+    { name: "Lily Cole", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lily-cole4/" },
+    { name: "Matt Hausler", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/matt-hausler-a03611296/" },
+    { name: "Hunter Robbins", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hunter-robbins-meche/" },
+    { name: "Julia Suchkova", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
+    { name: "Annie Malamphy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/annie-malamphy-86b411328/" },
   ];
 
   // Gamma Class members
