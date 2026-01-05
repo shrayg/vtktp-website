@@ -2,6 +2,8 @@
 
 Official website for Virginia Tech's Kappa Theta Pi (KTP) chapter - a co-ed professional technology fraternity.
 
+Past Repository: https://github.com/riazahsan/vtktp-website 
+
 ## Tech Stack
 
 - **Framework:** React 18 with TypeScript
