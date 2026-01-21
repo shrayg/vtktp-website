@@ -1,27 +1,38 @@
 import { Navigation } from "@/components/Navigation";
-import { Card } from "@/components/ui/card";
-import { Heart, Globe, Users, TreePine, Check } from "lucide-react";
 import { AccentBar } from "@/components/AccentBar";
-import { Link } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Import Franklin Zhang slideshow images
+import franklin1 from "@/assets/ktppictures/franklin/franklin1.jpg";
+import franklin2 from "@/assets/ktppictures/franklin/franklin2.jpg";
+import franklin3 from "@/assets/ktppictures/franklin/franklin3.jpg";
+import franklin4 from "@/assets/ktppictures/franklin/franklin4.jpg";
+
+// Import philanthropy images
+import roadwaySafetyImg from "@/assets/ktppictures/philanthropy/roadway-safety.jpg";
+import codeorgImg from "@/assets/ktppictures/philanthropy/codeorg.png";
+import appalachianTrailImg from "@/assets/ktppictures/philanthropy/appalachian-trail.jpg";
+
+const franklinImages = [franklin1, franklin2, franklin3, franklin4];
 
 const Philanthropy = () => {
-  const { toast } = useToast();
-  const [showCheck, setShowCheck] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText("ktp@vt.edu");
-      setShowCheck(true);
-      toast({
-        description: "Copied",
-        duration: 2000,
-      });
-      setTimeout(() => setShowCheck(false), 1000);
-    } catch (err) {
-      console.error("Failed to copy email:", err);
-    }
+  // Auto-advance slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % franklinImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % franklinImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + franklinImages.length) % franklinImages.length);
   };
 
   return (
@@ -29,143 +40,206 @@ const Philanthropy = () => {
       <Navigation />
       
       <main className="pt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
-              Philanthropy & Service
-            </h1>
-            <div className="flex justify-center mb-6">
-              <AccentBar color="blue" size="lg" />
+        {/* Page Header */}
+        <div className="text-center mb-12 px-6">
+          <h1 className="text-4xl md:text-5xl font-normal text-foreground mb-6">
+            Philanthropy & Service
+          </h1>
+          <div className="flex justify-center mb-6">
+            <AccentBar color="blue" size="lg" />
+          </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Our philanthropy efforts are led by <span className="text-foreground font-medium">Morgan Bradley</span>, 
+            VP of Philanthropy. Through organized fundraising events and community outreach, 
+            we work to honor the memory of Franklin Zhang and support causes close to our chapter's heart.
+          </p>
+        </div>
+
+        {/* Franklin Zhang Initiative Section */}
+        <section className="mb-20">
+          <div className="text-center mb-8 px-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+              The Franklin Zhang Initiative
+            </h2>
+            <div className="flex justify-center">
+              <AccentBar color="blue" size="md" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Giving back to our community through technology and service. We believe in using 
-              our skills and passion to make a positive impact.
-            </p>
           </div>
 
-          {/* Impact Stats */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <Card className="bg-card border-border p-8 text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">#</div>
-              <div className="text-muted-foreground">Placeholder</div>
-            </Card>
-            <Card className="bg-card border-border p-8 text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">#</div>
-              <div className="text-muted-foreground">Placeholder</div>
-            </Card>
-            <Card className="bg-card border-border p-8 text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">#</div>
-              <div className="text-muted-foreground">Placeholder</div>
-            </Card>
-          </div>
-
-          {/* Initiatives */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <Card className="bg-card border-border p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-foreground" />
-                </div>
-                <h3 className="text-2xl font-normal text-foreground">Tech for Good</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <br/>
-
-                We leverage our technical skills to help local nonprofits and community organizations. 
-                From building websites to developing mobile apps, we use technology to amplify the 
-                impact of those doing good work.
-              </p>
-              <ul className="space-y-2 text-muted-foreground/80 text-sm">
-                <li>• Website development for local nonprofits</li>
-                <li>• Digital literacy workshops for seniors</li>
-                <li>• Tech support for community centers</li>
-              </ul>
-            </Card>
-
-            <Card className="bg-card border-border p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
-                  <Users className="w-6 h-6 text-foreground" />
-                </div>
-                <h3 className="text-2xl font-normal text-foreground">STEM Education</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-              <br></br>
-                We're passionate about inspiring the next generation of technologists. Through 
-                partnerships with local schools, we provide hands-on STEM education and mentorship 
-                to students of all ages.
-              </p>
-              <ul className="space-y-2 text-muted-foreground/80 text-sm">
-                <li>• Coding workshops at local elementary schools</li>
-                <li>• Robotics competitions for middle schoolers</li>
-                <li>• High school programming mentorship</li>
-              </ul>
-            </Card>
-
-            <Card className="bg-card border-border p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
-                  <TreePine className="w-6 h-6 text-foreground" />
-                </div>
-                <h3 className="text-2xl font-normal text-foreground">Environmental Impact</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-              <br/>
-                Technology can be a powerful force for environmental conservation. We organize 
-                community clean-up events and develop apps to promote sustainable practices 
-                on campus and beyond.
-              </p>
-              <ul className="space-y-2 text-muted-foreground/80 text-sm">
-                <li>• Campus sustainability app development</li>
-                <li>• Quarterly community clean-up events</li>
-                <li>• E-waste recycling drives</li>
-              </ul>
-            </Card>
-
-            <Card className="bg-card border-border p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-muted rounded-sm flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-foreground" />
-                </div>
-                <h3 className="text-2xl font-normal text-foreground">Global Outreach</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-              <br/>
-                Our impact extends beyond Blacksburg. We partner with international organizations 
-                to provide technology solutions for global challenges and support educational 
-                initiatives in underserved communities.
-              </p>
-              <ul className="space-y-2 text-muted-foreground/80 text-sm">
-                <li>• Remote volunteer software development</li>
-                <li>• Educational resource creation</li>
-                <li>• Technology accessibility projects</li>
-              </ul>
-            </Card>
-          </div>
-
-          {/* Call to Action */}
-          <Card className="bg-card border-border p-12 text-center">
-            <h2 className="text-3xl font-normal text-foreground mb-4">Get Involved</h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Whether you're a student looking to make a difference or a community organization 
-              in need of tech support, we'd love to hear from you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-sm hover:bg-primary/90 transition-colors transition-transform duration-200 hover:scale-105"
+          {/* Slideshow */}
+          <div className="relative max-w-4xl mx-auto mb-12">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              {franklinImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Franklin Zhang ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                aria-label="Previous slide"
               >
-                {showCheck ? <Check className="w-4 h-4" /> : "Email Us"}
+                <ChevronLeft className="w-6 h-6" />
               </button>
-              <Link 
-                to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors transition-transform duration-200 hover:scale-105"
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                aria-label="Next slide"
               >
-                Contact Us
-              </Link>
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Dots */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {franklinImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentSlide ? "bg-white" : "bg-white/50"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
-          </Card>
+          </div>
+
+          {/* Franklin Zhang Bio */}
+          <div className="max-w-4xl mx-auto px-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-foreground text-center mb-6">
+              Franklin Zhang
+            </h3>
+            <p className="text-muted-foreground leading-relaxed text-lg text-center">
+              Frank was an active member of KTP's Alpha Class. Our members were lucky enough to know and love him for his kindness, loyalty, and incredibly clever sense of humor. Frank never failed to amaze us with his latest creative project; he was truly an inspiration to every member of KTP and beyond. At Virginia Tech, Frank was double-majoring in computer engineering and computer science, and was still heavily involved in several campus organizations. Not surprisingly, he was obsessed with all things coffee. He jumped at every opportunity to attend KTP's brotherhood events, especially hikes where he would meander off to explore, even if the water at the Cascades waterfall was 50 degrees. It is unfortunate to know that Frank wasn't able to reach his fullest potential, but we are grateful for his impact on KTP. He had already accomplished so much as just a freshman at VT. We chose to form our philanthropy around Frank to honor his memory and preserve the impact he had on our organization.
+            </p>
+          </div>
+        </section>
+
+        {/* Charities Section */}
+        <section className="mb-16">
+          <div className="text-center mb-8 px-6">
+            <h2 className="text-2xl md:text-3xl font-normal text-foreground mb-4">
+              Proceeds are split evenly amongst the three charities below
+            </h2>
+            <div className="flex justify-center">
+              <AccentBar color="blue" size="md" />
+            </div>
+          </div>
+
+          {/* Charity Sections */}
+          <div className="space-y-0">
+            {/* Roadway Safety Foundation - Image Left, Text Right */}
+            <section className="grid lg:grid-cols-2 min-h-[400px]">
+              <div className="relative overflow-hidden">
+                <img 
+                  src={roadwaySafetyImg} 
+                  alt="BT Transit Bus at Virginia Tech Campus" 
+                  className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 lg:p-12 bg-card">
+                <h4 className="text-xs uppercase tracking-wider text-primary mb-2">Roadway Safety</h4>
+                <h3 className="text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+                  The Roadway Safety Foundation
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  At the heart of our initiative is roadway safety. This foundation works to 
+                  reduce the frequency and severity of roadway accidents through improving 
+                  the design and operating conditions of roads.
+                </p>
+              </div>
+            </section>
+
+            {/* Code.org - Text Left, Image Right */}
+            <section className="grid lg:grid-cols-2 min-h-[400px]">
+              <div className="flex flex-col justify-center p-8 lg:p-12 bg-card order-2 lg:order-1">
+                <h4 className="text-xs uppercase tracking-wider text-primary mb-2">Passion for Technology</h4>
+                <h3 className="text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+                  Code.org
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  Our fraternity is centered around technology, an interest that Frank had and 
+                  pursued during his time at Virginia Tech. Code.org believes every student 
+                  should have the opportunity to learn about computer science and artificial 
+                  intelligence. This platform increases access to computer science education to all.
+                </p>
+              </div>
+              <div className="relative overflow-hidden order-1 lg:order-2 bg-[#00b4c5]">
+                <img 
+                  src={codeorgImg} 
+                  alt="Code.org Logo" 
+                  className="w-full h-full object-contain min-h-[300px] lg:min-h-[400px] p-8"
+                />
+              </div>
+            </section>
+
+            {/* Appalachian Trail - Image Left, Text Right */}
+            <section className="grid lg:grid-cols-2 min-h-[400px]">
+              <div className="relative overflow-hidden">
+                <img 
+                  src={appalachianTrailImg} 
+                  alt="Blue Ridge Mountains - Appalachian Trail" 
+                  className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 lg:p-12 bg-card">
+                <h4 className="text-xs uppercase tracking-wider text-primary mb-2">National Parks Foundation</h4>
+                <h3 className="text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+                  The Appalachian Trail
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  As Frank was an eager attendee to KTP's many brotherhood hikes, the 
+                  National Parks Foundation ties our initiative together. The organization 
+                  helps to fund projects that restore natural resources, improve visitor 
+                  access, and engage the community in preservation efforts.
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        {/* Visit Foundations */}
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-normal text-foreground mb-2">Visit the Foundations</h2>
+            <div className="flex justify-center">
+              <AccentBar color="blue" size="md" />
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="https://code.org/en-US"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors transition-transform duration-200 hover:scale-105"
+            >
+              Code.org
+            </a>
+            <a 
+              href="https://www.nationalparks.org/explore/parks/appalachian-national-scenic-trail"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors transition-transform duration-200 hover:scale-105"
+            >
+              Appalachian Trail
+            </a>
+            <a 
+              href="https://www.roadwaysafety.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-sm hover:bg-muted transition-colors transition-transform duration-200 hover:scale-105"
+            >
+              Roadway Safety Foundation
+            </a>
+          </div>
         </div>
       </main>
     </div>
