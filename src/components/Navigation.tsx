@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -48,10 +47,8 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Right side - Theme Toggle and Mobile Menu */}
+          {/* Right side - Mobile Menu */}
           <div className="flex items-center gap-4">
-            <ThemeToggle />
-            
             {/* Mobile Menu */}
             <div className="md:hidden">
               <Sheet open={open} onOpenChange={setOpen}>

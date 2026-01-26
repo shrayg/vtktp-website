@@ -21,17 +21,10 @@ const App = () => (
     <ThemeProvider 
       attribute="class" 
       defaultTheme="light" 
+      forcedTheme="light"
       enableSystem={false}
       storageKey="ktp-theme"
-      themes={["light", "dark"]}
     >
-      {/* 
-        Theme Configuration:
-        - Default theme: light (white background)
-        - Cookie storage: 'ktp-theme' (persists user preference)
-        - Themes: light (white) and dark (black)
-        - User preference is automatically saved and restored on page reload
-      */}
       <TooltipProvider>
         <Toaster />
         <Sonner />

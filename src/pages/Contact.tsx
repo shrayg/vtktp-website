@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("ktp@vt.edu");
+      await navigator.clipboard.writeText("ktpatvt@gmail.com");
       setShowCheck(true);
       toast({
         description: "Copied",
@@ -55,7 +55,7 @@ const Contact = () => {
                 onClick={handleCopyEmail}
                 className="inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-all cursor-pointer transition-transform duration-200 hover:scale-105"
               >
-                {showCheck ? <Check className="w-4 h-4" /> : "ktp@vt.edu"}
+                {showCheck ? <Check className="w-4 h-4" /> : "ktpatvt@gmail.com"}
               </button>
             </Card>
 
@@ -109,8 +109,6 @@ const Contact = () => {
                 <div className="space-y-2 text-sm">
                   <p><strong className="text-foreground">Requirements:</strong></p>
                   <ul className="space-y-1 pl-4">
-                    <li>• Placeholder</li>
-                    <li>• Placeholder</li>
                     <li>• Passion for technology and innovation</li>
                     <li>• Commitment to professional development</li>
                   </ul>
@@ -143,11 +141,6 @@ const Contact = () => {
                   <p className="text-foreground font-medium mb-1">Chapter Meetings</p>
                   <p className="text-sm">Wednesdays at 7:00 PM</p>
                   <p className="text-sm text-muted-foreground/70">Location shared with members</p>
-                </div>
-                <div>
-                  <p className="text-foreground font-medium mb-1">Placeholder</p>
-                  <p className="text-sm">Placeholder</p>
-                  <p className="text-sm text-muted-foreground/70">Placeholder</p>
                 </div>
               </div>
             </Card>

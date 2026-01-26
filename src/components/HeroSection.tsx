@@ -1,40 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { lazy, Suspense, useState, useEffect } from "react";
 import { AccentBar } from "@/components/AccentBar";
 
-// Lazy load the heavy ASCIIText component with Three.js
-const ASCIIText = lazy(() => import("./ASCIIText"));
-
 export const HeroSection = () => {
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const calculateScale = () => {
-      // Use 1080p (1080px) as the baseline height
-      const baselineHeight = 1080;
-      const currentHeight = window.innerHeight;
-      const newScale = Math.min(currentHeight / baselineHeight, 1);
-      setScale(newScale);
-    };
-
-    // Calculate initial scale
-    calculateScale();
-
-    // Recalculate on window resize
-    window.addEventListener('resize', calculateScale);
-    
-    return () => window.removeEventListener('resize', calculateScale);
-  }, []);
-
   return (
-    <section 
-      className="relative h-screen flex flex-col items-center justify-center bg-background"
-      style={{
-        transform: `scale(${scale})`,
-        transformOrigin: 'center center'
-      }}
-    >
+    <section className="relative h-screen flex flex-col items-center justify-center bg-background">
       {/* Subtle grid background - exactly like vars.gg */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03] light:opacity-[0.05]"
@@ -47,38 +17,20 @@ export const HeroSection = () => {
         }}
       />
 
-      {/* ASCII Text Effect - Desktop Only (xl breakpoint excludes tablets) */}
-      <div className="hidden xl:flex relative w-full max-w-4xl mx-auto px-6 h-[500px] mb-4 ascii-container items-center justify-center">
-        <Suspense fallback={
-          <div className="flex items-center justify-center h-full">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-foreground"></div>
-          </div>
-        }>
-          <ASCIIText 
-            text="KTP"
-            asciiFontSize={8}
-            textFontSize={250}
-            textColor="#fdf9f3"
-            planeBaseHeight={10}
-            enableWaves={true}
-          />
-        </Suspense>
-      </div>
-      
-      <style>{`
-        .light .ascii-container {
-          filter: invert(1);
-        }
-      `}</style>
-      
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="xl:hidden text-5xl md:text-6xl font-normal mb-8 text-foreground leading-[1.1] tracking-tight">
-          The Premier Professional
-          <br />
-          Technology Fraternity
-          <br />
-          <span className="text-muted-foreground">at Virginia Tech</span>
+        <h1 
+          className="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-[1] tracking-wide"
+          style={{ 
+            color: '#2b4c7e',
+            fontFamily: 'Georgia, "Times New Roman", serif',
+            fontWeight: 400
+          }}
+        >
+          ΚΘΠ
         </h1>
+        <p className="text-xl md:text-2xl text-muted-foreground mb-4 tracking-widest uppercase">
+          Kappa Theta Pi
+        </p>
         
         <div className="flex justify-center mb-8">
           <AccentBar color="blue" size="lg" />

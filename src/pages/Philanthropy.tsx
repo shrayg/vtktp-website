@@ -49,8 +49,7 @@ const Philanthropy = () => {
             <AccentBar color="blue" size="lg" />
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Our philanthropy efforts are led by <span className="text-foreground font-medium">Layla Abreu</span>, 
-            VP of Philanthropy. Through organized fundraising events and community outreach, 
+            Through organized fundraising events and community outreach, 
             we work to honor the memory of Franklin Zhang and support causes close to our chapter's heart.
           </p>
         </div>
