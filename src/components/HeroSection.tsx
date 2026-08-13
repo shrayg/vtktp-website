@@ -48,7 +48,7 @@ export const HeroSection = () => {
           asChild
         >
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
-            Spring 2026 Interest Form
+            Fall 2026 Interest Form
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </Button>
