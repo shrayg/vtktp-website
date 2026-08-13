@@ -14,66 +14,87 @@ const Members = () => {
   };
 
   const eBoard = [
-    { name: "Jasmine Varma", role: "President", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jasminevarma/" },
-    { name: "Morgan Bradley", role: "Co-President", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
-    { name: "Kamryn McKinney", role: "VP External", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
-    { name: "Nazila Abyaneh", role: "VP Finance", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/nazila-abyaneh-57a723330/" },
-    { name: "Ghazal Tanavade", role: "VP Internal Operations", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ghazal-tanavade/" },
-    { name: "Ramya Radhakrishnan", role: "VP Professional Development", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ramya-radhakrishnan1/" },
+    { name: "Morgan Bradley", role: "President", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/morganmarybradley/" },
+    { name: "Sean Breslin", role: "VP Finance", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/seanbreslin1/" },
+    { name: "Layla Abreu", role: "VP External", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/layla-abreu-6914b4278/" },
+    { name: "Ghazal Tanavade", role: "VP Internal", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ghazal-tanavade/" },
+    { name: "Joshua Ponnraj", role: "VP Professional", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/joshua-ponnraj/" },
     { name: "Dominic Kretzing", role: "VP Membership", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/dominickretzing/" },
-    { name: "Brianna McDonald", role: "VP Marketing", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/brianna-mcdonald-b98096299/" },
-    { name: "Sree Mamilla", role: "VP Social Engagement", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/sreeyuktha-mamilla-59b32324a/" },
-    { name: "Mitchell Vikhman", role: "VP New Member Recruitment", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mitchellvikhman/" },
-    { name: "Shray Gupta", role: "VP Technical Advancement", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/shraygupta06/" },
-    { name: "Layla Abreu", role: "VP Philanthropy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/layla-abreu-6914b4278/" },
+    { name: "Charu Vijay", role: "Co-VP Marketing", gender: "female", gradYear: "2029", linkedin: "" },
+    { name: "Chanel Harvey", role: "Co-VP Marketing", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Austen Liles", role: "VP Social", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/austenliles/" },
+    { name: "Mitchell Vikhman", role: "VP NMR", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mitchellvikhman/" },
+    { name: "Yousif Abuhaija", role: "VP Technical Advancement", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/yousif-abuhaija/" },
+    { name: "Samir Khattak", role: "VP Philanthropy", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/samir-khattak/" },
+  ];
+
+  // Committee chairs
+  const chairs = [
+    { name: "Hamza Rafat", role: "Membership Chair", gender: "male", gradYear: "2028", linkedin: "" },
+    { name: "Sophia Gwaltney", role: "Outreach Chair", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/sophia-gwaltney-a065b2201/" },
+    { name: "Brianna McDonald", role: "Rush Chair", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/brianna-mcdonald-b98096299/" },
+    { name: "Ishaan Dave", role: "Merch Chair", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Madhumita Ranjith", role: "Committee Chair", gender: "", gradYear: "2029", linkedin: "" },
   ];
 
   // Alpha Class members
   const alphaClass = [
     { name: "Gianni Ager", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/gianniager/" },
     { name: "Justin Burns", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/justin-burns-465036291/" },
-    { name: "Sophia Gwaltney", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/sophia-gwaltney-a065b2201/" },
     { name: "Hanru Li", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hanru-li-ba9012269/" },
-    { name: "Austen Liles", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/austenliles/" },
     { name: "Noor Naim", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/noor-naim-99850a352/" },
-    { name: "Hailey Pazmino", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hailey-pazmino-75a3b828b/" },
+    { name: "Hunter Robbins", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hunter-robbins-meche/" },
     { name: "Mallory Shumway", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mallory-shumway/" },
-    { name: "Divyasimha Talreja", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/divyasimha-talreja/" },
   ];
 
   // Beta Class members
   const betaClass = [
-    { name: "Aashi Dugar", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/aashi-dugar-371255327/" },
-    { name: "Lily Ehler", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lmehler/" },
-    { name: "Michael Duarte", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mduarte04/" },
-    { name: "Peter MacPhail", gender: "male", gradYear: "2028", linkedin: "" },
-    { name: "Antara Rajgopal", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/antara-rajgopal/" },
-    { name: "Ashwin Tripathy", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ashwin-tripathy/" },
-    { name: "Riaz Ahsan", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/riazoahsan/" },
+    { name: "Nazila Abyaneh", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/nazila-abyaneh-57a723330/" },
     { name: "Lily Cole", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lily-cole4/" },
+    { name: "Michael Duarte", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mduarte04/" },
+    { name: "Aashi Dugar", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/aashi-dugar-371255327/" },
     { name: "Matt Hausler", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/matt-hausler-a03611296/" },
-    { name: "Hunter Robbins", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/hunter-robbins-meche/" },
-    { name: "Julia Suchkova", gender: "female", gradYear: "2026", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
+    { name: "Peter MacPhail", gender: "male", gradYear: "2028", linkedin: "" },
     { name: "Annie Malamphy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/annie-malamphy-86b411328/" },
+    { name: "Sree Mamilla", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/sreeyuktha-mamilla-59b32324a/" },
+    { name: "Kamryn McKinney", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
+    { name: "Ramya Radhakrishnan", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ramya-radhakrishnan1/" },
+    { name: "Antara Rajgopal", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/antara-rajgopal/" },
+    { name: "Julia Suchkova", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
+    { name: "Ashwin Tripathy", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ashwin-tripathy/" },
+    { name: "Jasmine Varma", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jasminevarma/" },
   ];
 
   // Gamma Class members
   const gammaClass = [
-    { name: "Yousif Abuhaija", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/yousif-abuhaija/" },
     { name: "Karla Andujar", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/karla-andujar-b56952327/" },
-    { name: "Sean Breslin", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/seanbreslin1/" },
-    { name: "Luke Brugger", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/luke-brugger/" },
     { name: "Jaylene Chute", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jaylene-chute-4ab95320b/" },
-    { name: "Ryan Gow", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ryan-gow04/" },
-    { name: "Charlie Hui", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/charleshui06/" },
+    { name: "Shray Gupta", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/shraygupta06/" },
     { name: "Keegan Hoyne", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/keeganhoyne/" },
-    { name: "Samir Khattak", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/samir-khattak/" },
+    { name: "Charlie Hui", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/charleshui06/" },
     { name: "Tim Pactwa", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/timothy-pactwa-189a6132a/" },
-    { name: "Joshua Ponnraj", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/joshua-ponnraj/" },
-    { name: "Akanksha Potluri", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/akanksha-potluri/" },
-    { name: "Hamza Rafat", gender: "male", gradYear: "2028", linkedin: "" },
+    { name: "Akanksha Potluri", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/akanksha-potluri/" },
     { name: "Nick Teal", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/nicholasteal1/" },
-    { name: "Charu Vijay", gender: "female", gradYear: "2029", linkedin: "" },
+  ];
+
+  // Delta Class members
+  const deltaClass = [
+    { name: "Josefine Allen", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Jessica Boateng", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Liam Butler", gender: "", gradYear: "2029", linkedin: "" },
+    { name: "Aarya Ghimire", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Rushikesh Gurav", gender: "", gradYear: "2029", linkedin: "" },
+    { name: "Vamsi Sri Sai Guttikonda", gender: "", gradYear: "2029", linkedin: "" },
+    { name: "Jordan Jones", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Anya Kanodia", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Gabi Lockefeer", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Sapna Moothedan", gender: "", gradYear: "2029", linkedin: "" },
+    { name: "Vamsi Muppala", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Jenna Nahavandi", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Vishnu Ravi", gender: "", gradYear: "2029", linkedin: "" },
+    { name: "Jaydytia Somaiya", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Ishita Thatavarthi", gender: "", gradYear: "2028", linkedin: "" },
+    { name: "Krishna Vankayala", gender: "", gradYear: "2028", linkedin: "" },
   ];
 
   // Greek letters for each class
@@ -85,6 +106,8 @@ const Members = () => {
       return "Β";
     case "Gamma Class":
       return "Γ";
+    case "Delta Class":
+      return "Δ";
     default:
       return "";
   }
@@ -94,7 +117,8 @@ const Members = () => {
   const allMembers = [
     ...alphaClass.map(member => ({ ...member, class: "Alpha Class" })),
     ...betaClass.map(member => ({ ...member, class: "Beta Class" })),
-    ...gammaClass.map(member => ({ ...member, class: "Gamma Class" }))
+    ...gammaClass.map(member => ({ ...member, class: "Gamma Class" })),
+    ...deltaClass.map(member => ({ ...member, class: "Delta Class" }))
   ].sort((a, b) => {
     const aLastName = a.name.split(' ').pop() || '';
     const bLastName = b.name.split(' ').pop() || '';
@@ -128,7 +152,7 @@ const Members = () => {
                 <Users className="w-6 h-6 text-foreground" />
               </div>
 
-              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
+              <div className="text-2xl font-bold text-foreground mb-1">60+</div>
               <div className="text-muted-foreground text-sm">Active Members</div>
             </Card>
 
@@ -168,7 +192,53 @@ const Members = () => {
                 <div key={index} className="text-center">
                   <div className="relative group w-24 h-24 md:w-32 md:h-32 bg-muted rounded-full mb-4 mx-auto border border-border overflow-hidden">
                     <img 
-                      src={getMemberImage(member.name, member.gender, true)}
+                      src={getMemberImage(member.name, member.gender)}
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-40"
+                      onError={(e) => handleImageError(e, member.gender)}
+                    />
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-[10px] md:text-xs text-foreground text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-1">
+                      
+                      {member.gradYear && (
+                        <div className="mt-0.5">
+                          Class of {member.gradYear}
+                        </div>
+                      )}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1"
+                      >
+                      <FaLinkedin className="w-4 h-4 md:w-5 md:h-5" />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <h3 className="text-foreground font-medium text-sm md:text-base">{member.name}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm">{member.role}</p>
+            </div>
+          ))}
+ 
+            </div>
+          </div>
+
+          {/* Chairs Section */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-normal text-foreground mb-4 text-center">Chairs</h2>
+            <div className="flex justify-center mb-8">
+              <AccentBar color="blue" size="md" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {chairs.map((member, index) => (
+                <div key={index} className="text-center">
+                  <div className="relative group w-24 h-24 md:w-32 md:h-32 bg-muted rounded-full mb-4 mx-auto border border-border overflow-hidden">
+                    <img 
+                      src={getMemberImage(member.name, member.gender)}
                       alt={member.name}
                       className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-40"
                       onError={(e) => handleImageError(e, member.gender)}
@@ -218,7 +288,7 @@ const Members = () => {
                 <div key={`member-${index}`} className="text-center">
                   <div className="relative group w-16 h-16 md:w-20 md:h-20 bg-muted rounded-full mb-2 mx-auto border border-border overflow-hidden">
                     <img 
-                      src={getMemberImage(member.name, member.gender, false)}
+                      src={getMemberImage(member.name, member.gender)}
                       alt={member.name}
                       className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-40"
                       onError={(e) => handleImageError(e, member.gender)}
@@ -265,7 +335,7 @@ const Members = () => {
               asChild
             >
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
-                Apply for Spring 2026
+                Apply for Fall 2026
               </a>
             </Button>
           </Card>
