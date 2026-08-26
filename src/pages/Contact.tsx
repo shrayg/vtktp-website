@@ -5,6 +5,7 @@ import { Mail, Instagram, Linkedin, MapPin, Clock, Users, Check } from "lucide-r
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { AccentBar } from "@/components/AccentBar";
+import { INTEREST_FORM_URL } from "@/data/links";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -118,7 +119,7 @@ const Contact = () => {
                   className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 font-medium w-full mt-4 transition-transform duration-200 hover:scale-105"
                   asChild
                 >
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAmgra6nKbO95DBAfM4O08yxWK0S6bf1DWztz3KIytlgQHg/viewform" target="_blank" rel="noopener noreferrer">
+                  <a href={INTEREST_FORM_URL} target="_blank" rel="noopener noreferrer">
                     Apply Now
                   </a>
                 </Button>
