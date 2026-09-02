@@ -38,6 +38,17 @@ const Members = () => {
     { name: "Madhumita Ranjith", role: "Committee Chair", gender: "", gradYear: "2029", linkedin: "" },
   ];
 
+  // Founding Class members
+  const foundingClass = [
+    { name: "Nazila Abyaneh", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/nazila-abyaneh-57a723330/" },
+    { name: "Lily Cole", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lily-cole4/" },
+    { name: "Matt Hausler", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/matt-hausler-a03611296/" },
+    { name: "Annie Malamphy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/annie-malamphy-86b411328/" },
+    { name: "Kamryn McKinney", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
+    { name: "Julia Suchkova", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
+    { name: "Jasmine Varma", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jasminevarma/" },
+  ];
+
   // Alpha Class members
   const alphaClass = [
     { name: "Gianni Ager", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/gianniager/" },
@@ -50,29 +61,21 @@ const Members = () => {
 
   // Beta Class members
   const betaClass = [
-    { name: "Nazila Abyaneh", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/nazila-abyaneh-57a723330/" },
-    { name: "Lily Cole", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/lily-cole4/" },
     { name: "Michael Duarte", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/mduarte04/" },
     { name: "Aashi Dugar", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/aashi-dugar-371255327/" },
-    { name: "Matt Hausler", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/matt-hausler-a03611296/" },
     { name: "Peter MacPhail", gender: "male", gradYear: "2028", linkedin: "" },
-    { name: "Annie Malamphy", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/annie-malamphy-86b411328/" },
     { name: "Sree Mamilla", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/sreeyuktha-mamilla-59b32324a/" },
-    { name: "Kamryn McKinney", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/kamryn-mckinney-6005262b1/" },
     { name: "Ramya Radhakrishnan", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/ramya-radhakrishnan1/" },
     { name: "Antara Rajgopal", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/antara-rajgopal/" },
-    { name: "Julia Suchkova", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/julia-suchkova-6b7a06294/" },
-    { name: "Ashwin Tripathy", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/ashwin-tripathy/" },
-    { name: "Jasmine Varma", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jasminevarma/" },
   ];
 
   // Gamma Class members
   const gammaClass = [
     { name: "Karla Andujar", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/karla-andujar-b56952327/" },
+    { name: "Luke Brugger", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/luke-brugger/" },
     { name: "Jaylene Chute", gender: "female", gradYear: "2027", linkedin: "https://www.linkedin.com/in/jaylene-chute-4ab95320b/" },
     { name: "Shray Gupta", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/shraygupta06/" },
     { name: "Keegan Hoyne", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/keeganhoyne/" },
-    { name: "Charlie Hui", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/charleshui06/" },
     { name: "Tim Pactwa", gender: "male", gradYear: "2027", linkedin: "https://www.linkedin.com/in/timothy-pactwa-189a6132a/" },
     { name: "Akanksha Potluri", gender: "female", gradYear: "2028", linkedin: "https://www.linkedin.com/in/akanksha-potluri/" },
     { name: "Nick Teal", gender: "male", gradYear: "2028", linkedin: "https://www.linkedin.com/in/nicholasteal1/" },
@@ -101,6 +104,8 @@ const Members = () => {
   // Greek letters for each class
   const getGreekLetter = (memberClass: string) => {
   switch (memberClass) {
+    case "Founding Class":
+      return "★";
     case "Alpha Class":
       return "Α";
     case "Beta Class":
@@ -116,6 +121,7 @@ const Members = () => {
 
   // Combine all classes and sort alphabetically by last name
   const allMembers = [
+    ...foundingClass.map(member => ({ ...member, class: "Founding Class" })),
     ...alphaClass.map(member => ({ ...member, class: "Alpha Class" })),
     ...betaClass.map(member => ({ ...member, class: "Beta Class" })),
     ...gammaClass.map(member => ({ ...member, class: "Gamma Class" })),
